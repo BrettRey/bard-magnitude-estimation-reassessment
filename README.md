@@ -14,7 +14,8 @@ and contemporary acceptability resources as the afterlife of the construct.
 The paper should not claim to be a direct replication unless the original
 participant-level data can be located. Its stronger form is an archival and
 secondary-data reassessment of what survived: the measurement program for
-acceptability, not the privileged status of magnitude estimation.
+acceptability, the documented ME scale-resolution claim, and the later stronger
+reading of ME as a privileged measurement tool.
 
 ## Build
 

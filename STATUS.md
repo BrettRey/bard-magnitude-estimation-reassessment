@@ -19,14 +19,46 @@ Infrastructure:
 - Uses central house-style symlinks only.
 - Uses central `references.bib` symlink only.
 - No local house-style snapshot.
-- No datasets downloaded.
-- No local BibTeX entries added.
+- No datasets downloaded into the repository. Verification copies of public Sprouse data were inspected under `/tmp/bard-data-check` only.
+- Local BibTeX entries added only after source verification.
 - Central LaTeX style linter with strict checks passes.
 - XeLaTeX/Biber/XeLaTeX/XeLaTeX build passes; final log scan found no undefined citations, no overfull boxes, and no empty bibliography warnings.
 
+Source verification progress:
+
+- Verified Bard, Robertson, and Sorace (1996) article metadata and DOI.
+- Verified the Bard claim target at the abstract/research-paper-abstract level: ME is presented as solving conventional scale problems and yielding robust fine distinctions. Do not strengthen this into a blanket Bard superiority claim without more source grounding.
+- Verified Sprouse, Schuetze, and Almeida (2013) article metadata, core design facts, public data zip, and materials workbook on Jon Sprouse's current author site.
+- Verified Sprouse and Almeida (2017) public method-comparison data zip and materials workbook on Jon Sprouse's current author site.
+- Verified Langsford et al. (2018) article metadata, measures compared, and stimulus/corpus/model supplement. Raw participant-response rows were not found after Glossa, author-page, and OSF/PsyArXiv API checks.
+- Verified CoLA publication and public dataset README, including split sizes and copyright/fair-use warning.
+- Verified BLiMP publication, repository, license, task design, and erratum note.
+- Verified Syntactic Acceptability Dataset publication and repository, including the grammaticality/acceptability distinction.
+- Added local BibTeX entries for verified sources missing from the central bibliography: Bard 1996, Langsford 2018, CoLA dataset, and CoLA TACL paper.
+
+Design update:
+
+- Reframed the empirical design around a common-latent-signal null rather than a scrambled-data null, but made the latent/response-style/test-retest apparatus conditional on data that can actually support those estimands.
+- Added Gelmanian estimands and forking-path constraints to `notes/project-brief.md` and `notes/assumptions-and-pressure-test.md`.
+- Replaced the placeholder prose in `sections/03-secondary-data-design.tex` and `sections/04-scale-and-reliability.tex` with the measurement-null and reliability framing.
+- Added the genre gate: current feasible paper is a constrained secondary reanalysis of Sprouse row-level data plus article-grounded synthesis of Langsford, not a full re-fit of all method-comparison evidence.
+- Added `notes/analysis-charter.md` as the pre-analysis commitment device. It fixes dataset routing, primary comparisons, primary scoring rules, practical-advantage criteria, negative controls, forbidden claims, and revision triggers before any new row-level modelling or visualization.
+- Opened the analysis charter in Roughdraft; the review completed with no CriticMarkup changes to resolve.
+- Drafted `notes/sprouse-data-reuse-email.md`, a short request to Jon Sprouse about novel secondary reuse of the public 2013/2017 data files.
+- Sent the reuse request to Jon Sprouse at `jon.sprouse@nyu.edu`.
+- Added `notes/dataset-inventory.md`, a structural-only inventory of the public Sprouse verification copies. It records files, columns, row counts, key counts, crosswalk needs, and charter mapping without computing method rankings or outcome summaries.
+- Added `data/README.md` documenting that raw data and derived outputs are not committed while reuse and analysis scope remain unsettled.
+- Added `scripts/build_sprouse_crosswalks.py`, which imports Sprouse result CSVs with the documented `skip=5` rule, preserves original identifiers, and writes ignored structural outputs under `data/derived/sprouse/`.
+- Ran the crosswalk script against `/tmp/bard-data-check`. It produced schema and crosswalk files locally under ignored `data/derived/sprouse/`.
+- Scripted structural check: the 2013 FC-to-ME/LS pair crosswalk has 144 exact matches and all 150 pairs after explicit compact spacing-key matching; the six non-exact cases are `den Dikken`/`denDikken` and `de Vries`/`deVries` ID-spacing variants.
+- Scripted structural check: the 2017 yes/no-only IDs are `B`, `G`, and `M`, each absent from the materials workbook and appearing as repeated early-order rows rather than linguistic item IDs.
+- Fixed pre-analysis representation rules: `FC.signtest.csv` is the primary 2013 forced-choice representation; `FC.logistic.csv` is a named sensitivity representation.
+- Fixed pre-analysis 2017 YN inclusion rule: exclude `B`, `G`, and `M` from item-level comparisons, leaving 786 yes/no items aligned with the ME/LS/FC item universe.
+- Updated `scripts/build_sprouse_crosswalks.py` to write ignored machine-readable rules in `data/derived/sprouse/analysis_rules.csv` and `data/derived/sprouse/2017_yn_item_inclusion.csv`.
+
 Next steps:
 
-1. Verify the Bard, Sprouse, Langsford, CoLA, BLiMP, and SAD sources against authoritative pages.
-2. Add verified missing BibTeX entries either to the central bibliography or, if truly project-specific, to `references-local.bib`.
-3. Decide whether the paper's empirical core is method comparison, construct drift, or acceptability/grammaticality divergence.
-4. Build a dataset inventory before downloading or transforming data.
+1. Draft the first outcome-analysis script skeleton so it reads `analysis_rules.csv` before computing any summaries, but keep substantive runs gated pending Sprouse's reply.
+2. Wait for Sprouse's reply before treating novel secondary results as publication-ready.
+3. Search one more time for Langsford raw data only if the paper needs participant-level test-retest/response-style modelling; otherwise treat Langsford as article-level evidence.
+4. Move project-specific BibTeX entries to the central bibliography later if they become reusable outside this project.
