@@ -99,7 +99,8 @@ Null re-specification (2026-06-23, the board's headline fix):
 - Did §6 profile identity conditions (profile = structure of licensed inferences, not the average of channels; disagreement adjudicated by which inferences hold) and disambiguated the §3 "sources" vs §6 "channels" wording with a cross-reference.
 - House-style: "data" now singular in main.tex and §3.
 - Build clean (8 pages, no undefined cites/refs, no overfull boxes).
-- Remaining board items: GENRE-LANE DECISION (Registered Report Stage 1 vs theory/methodology note) -- this is Brett's call, surfaced 2026-06-23; B/G/M confirmation is blocked on Sprouse's reply to the reuse email.
+- Genre lane: Brett chose to HOLD the hybrid until Sprouse replies (permission pending, not denied). Revisit RR-Stage-1 vs theory-note when the reuse answer lands. Do not submit in hybrid state.
+- B/G/M confirmation also blocked on Sprouse's reply. With genre held and B/G/M blocked, the paper is at a clean pause point: every review-board item is either resolved or waiting on Sprouse.
 
 Next steps:
 
