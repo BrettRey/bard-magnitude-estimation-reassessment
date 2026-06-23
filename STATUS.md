@@ -61,6 +61,9 @@ Design update:
 - Replaced the placeholder abstract, opening problem section, and Bard-target section with source-gated framing prose.
 - Added an evidence-routing table to `sections/03-secondary-data-design.tex` distinguishing Bard article evidence, Sprouse row-level comparison data, Langsford article-level reliability evidence, and benchmark afterlife evidence.
 - Rebuilt `main.pdf`; the final log scan found no undefined citations, no overfull boxes, no underfull boxes, and only the existing template-level `fancyhdr`/`microtype` warnings.
+- Replaced the remaining section placeholders in `sections/05-contemporary-afterlife.tex`, `sections/06-grammaticality-and-acceptability.tex`, and `sections/07-conclusion.tex`.
+- Current manuscript now has prose in all substantive sections; the only remaining `TODO` is the final AI-use disclosure in acknowledgements.
+- Rebuilt `main.pdf` again; the final log scan found no undefined citations, no overfull boxes, no underfull boxes, and only the existing template-level `fancyhdr`/`microtype` warnings.
 
 Next steps:
 
