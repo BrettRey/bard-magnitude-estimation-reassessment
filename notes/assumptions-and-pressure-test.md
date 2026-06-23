@@ -11,22 +11,28 @@
 3. Later datasets can compare measurement choices without collapsing acceptability into grammaticality.
    - Falsification condition: if the datasets do not preserve task framing, item provenance, and response structure, they cannot support the ontology claim.
 
-4. Benchmark datasets are useful as afterlife evidence, not direct replication evidence.
+4. Grammar is best treated here as a system of projectibility profiles.
+   - Falsification condition: if the paper lets one measurement channel stand
+     in for the whole profile, it has lost the distinction between
+     acceptability response, production, correction, register fit, theoretical
+     classification, and community licensing.
+
+5. Benchmark datasets are useful as afterlife evidence, not direct replication evidence.
    - Falsification condition: if the paper treats CoLA, BLiMP, or SAD as replacements for Bard's experiment or as evidence about ME-vs-Likert, the design has drifted.
 
-5. The project can stay no-new-data.
+6. The project can stay no-new-data.
    - Falsification condition: if the TESL-facing distinctions between personal production, correction, register fit, and standardness are central, new human judgments will be needed.
 
-6. The relevant null is a common-latent-signal model, not scrambled data.
+7. The relevant null is a common-latent-signal model, not scrambled data.
    - Falsification condition: if later datasets cannot support a model in which methods are compared on the same or comparable item-level acceptability signal, the paper should not claim to assess magnitude estimation's practical measurement advantage.
 
-7. Negative controls can reveal pipeline artefacts.
+8. Negative controls can reveal pipeline artefacts.
    - Falsification condition: if shuffled labels, permuted method labels, or no-method-advantage simulations routinely produce apparent magnitude-estimation advantages, the planned analysis is too sensitive to researcher degrees of freedom.
 
-8. Participant-level estimands require participant-level rows.
+9. Participant-level estimands require participant-level rows.
    - Falsification condition: if a source provides only published convergence rates, correlations, or prose summaries, it cannot support claims about participant response style, test-retest behaviour, or method-by-item instability beyond what the article itself reports.
 
-9. The Bard target must be source-grounded.
+10. The Bard target must be source-grounded.
    - Falsification condition: if the paper cannot cite Bard et al. for a strong method-superiority claim, the target becomes the documented scale-resolution claim plus the stronger reception of magnitude estimation in later work.
 
 ## Level discipline
@@ -34,7 +40,7 @@
 - Participant response data supports claims about response patterns, task effects, and judgments under a prompt.
 - Expert asterisks support claims about item classification under a theoretical or editorial standard.
 - Benchmark labels support claims about dataset construction and model evaluation targets.
-- None of these alone settles theoretical grammaticality without an explicit bridge.
+- None of these alone settles a full grammaticality projectibility profile without an explicit bridge.
 
 ## Gelmanian measurement null
 

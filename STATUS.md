@@ -64,6 +64,8 @@ Design update:
 - Replaced the remaining section placeholders in `sections/05-contemporary-afterlife.tex`, `sections/06-grammaticality-and-acceptability.tex`, and `sections/07-conclusion.tex`.
 - Current manuscript now has prose in all substantive sections; the only remaining `TODO` is the final AI-use disclosure in acknowledgements.
 - Rebuilt `main.pdf` again; the final log scan found no undefined citations, no overfull boxes, no underfull boxes, and only the existing template-level `fancyhdr`/`microtype` warnings.
+- Reframed the grammar/acceptability discussion around grammar as a system of projectibility profiles: acceptability judgments are now treated as one evidential route into grammaticality rather than as the whole target.
+- Updated `notes/project-brief.md` and `notes/assumptions-and-pressure-test.md` so the projectibility-profile theory is part of the project route and pressure-test surface.
 
 Next steps:
 
@@ -71,3 +73,10 @@ Next steps:
 2. If reuse is approved or the analysis is explicitly verification-only, add the first substantive analysis script after the gate reads as open.
 3. Search one more time for Langsford raw data only if the paper needs participant-level test-retest/response-style modelling; otherwise treat Langsford as article-level evidence.
 4. Move project-specific BibTeX entries to the central bibliography later if they become reusable outside this project.
+
+## Literature Hooks
+
+### 2026-06-23 - Cai et al. 2026 Nature
+
+- Central note: `../../literature/cai_etal_2026_neuronal_language_models.notes.md`.
+- Use only as a guardrail if the paper discusses the contemporary afterlife of acceptability as a benchmark or neural target. Neural encoding of parser-derived features during speech production does not settle acceptability, grammaticality, or the measurement status of magnitude estimation.

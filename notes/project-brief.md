@@ -47,7 +47,10 @@ The paper should clarify what kind of no-new-data project this is:
 - reproduction, if published Bard numbers are re-run;
 - secondary analysis, if later judgment datasets are re-modelled;
 - conceptual replication, if Bard's methodological claims are tested on later data;
-- theoretical revision, if the paper separates acceptability, grammaticality, naturalness, standardness, and correction behaviour.
+- theoretical revision, if the paper treats grammar as a system of
+  projectibility profiles and separates acceptability, grammaticality,
+  naturalness, standardness, and correction behaviour by the inferences each
+  licenses.
 
 ## Gelmanian design constraint
 
@@ -75,3 +78,17 @@ model.
 5. The contemporary afterlife of acceptability.
 6. Grammaticality and acceptability.
 7. Conclusion.
+
+## Projectibility-profile grammar
+
+The paper should not import a broader kind-theoretic vocabulary. The more local
+theoretical claim is that grammar is a system of projectibility
+profiles: relatively stable patterns that license inferences from forms,
+meanings, contexts, speakers, and judgments to uses a community or register
+treats as available.
+
+Acceptability judgments are one evidential route into such a profile. They can
+support claims about task-conditioned judgment, scale stability, item
+difficulty, and sometimes community licensing. They do not by themselves settle
+production, correction, register fit, theoretical classification, or the full
+profile of a construction.
