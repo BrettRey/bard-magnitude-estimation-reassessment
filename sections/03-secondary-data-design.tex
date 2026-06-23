@@ -63,12 +63,22 @@ needed to estimate them. This ordering keeps the analysis from selecting
 whichever scale looks best after the fact, the kind of forking path Gelman and
 Loken warn about \parencite{GelmanLoken2013,gelman2014statcrisis}.
 
-The substantive comparison is a common-latent-signal null: magnitude
-estimation, Likert ratings, forced choice, and Thurstonian choice are first
-modelled as noisy observations of the same item-level acceptability.
-A magnitude-estimation term becomes interesting only if it improves prediction,
-reliability, or decision stability enough to matter. Scrambled labels,
-method-label permutations, and simulations from a no-method-advantage latent
-model are negative controls for the pipeline, checking whether the analysis
-manufactures a method winner from degraded structure. They are not substitutes
-for the substantive common-signal comparison.
+The substantive comparison is a measurement null, but a careful one. Magnitude
+estimation, Likert ratings, forced choice, and Thurstonian choice are modelled
+as readings of a common item-level acceptability signal through method-specific
+response functions, not as the same signal plus method noise: the bounded
+methods can compress the signal at the extremes, while the open ratio scale need
+not. The single-dimension assumption is tested before any method-specific term
+is read, by comparing a one-factor model against correlated-two-factor and
+bifactor alternatives and checking method residuals for item-level structure.
+
+This ordering matters because the advantage Bard et al.\ actually claimed is
+about resolution, recovering distinctions that fixed scales censor
+\parencite[35]{BardEtAl1996}. A plain common-signal-plus-noise null would book
+that resolution as magnitude-estimation noise and let the method only lose; the
+response functions and the dimensionality gate let a resolution advantage
+register instead. If one factor suffices, magnitude estimation still has to earn
+its term; if it does not, the analysis turns to where the methods diverge.
+Scrambled labels, method-label permutations, and simulations from the
+response-function model remain negative controls for the pipeline, not the
+substantive comparison.

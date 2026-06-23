@@ -16,8 +16,23 @@ fine-grained acceptability data, plus the stronger later reading that magnitude
 estimation has a privileged methodological status.
 
 The analysis should therefore compare magnitude estimation against a serious
-measurement null: formal methods are noisy observations of a common item-level
-acceptability signal. Magnitude estimation has to earn any method-specific term.
+measurement null: formal methods observe a common item-level acceptability
+signal through method-specific response functions, not merely the same signal
+plus method noise. Bounded methods (Likert, forced choice, yes/no) can censor or
+compress the signal at the extremes; magnitude estimation's open ratio scale
+need not. The null is that one latent dimension, read through those response
+functions, suffices. Magnitude estimation has to earn any method-specific term,
+and the single-dimension assumption itself has to survive a falsification test
+before any such term is adjudicated.
+
+This is a deliberate correction. A plain "common signal plus method noise" null
+cannot represent the specific advantage Bard et al. actually claimed, namely
+that an open ratio scale recovers gradient distinctions that fixed-point scales
+lose by construction (a resolution / scale-boundary claim, pp. 32, 35, 41). Under
+that simpler null, any resolution that magnitude estimation recovers but bounded
+scales compress is booked as magnitude-estimation noise, so the method can only
+lose. The response-function and dimensionality machinery below is what keeps the
+null from being rigged against the claim under test.
 
 ## Dataset Routing
 
@@ -50,19 +65,79 @@ acceptability signal. Magnitude estimation has to earn any method-specific term.
 
 ## Primary Estimands
 
+0. Measurement structure (estimated first, see the gate below): whether one
+   latent acceptability dimension, read through method-specific response
+   functions, suffices, or whether methods load on distinct dimensions. This is
+   prior to every estimand that follows; if it fails, the single-signal
+   comparison is the wrong question, not just a question with a different answer.
 1. Common item-level acceptability signal: the degree to which methods recover
    the same item or contrast ordering.
 2. Method-specific noise or bias: the residual method contribution after
-   accounting for item or contrast signal.
-3. Decision agreement: whether methods lead to the same theoretically relevant
+   accounting for item or contrast signal and the response function.
+3. Resolution: whether magnitude estimation recovers graded item differences
+   that bounded methods compress at ceiling or floor. This is Bard's actual
+   claim and is not reducible to noise or bias.
+4. Decision agreement: whether methods lead to the same theoretically relevant
    acceptability conclusions for contrasts.
-4. Method-by-item instability: cases where method choice changes the linguistic
+5. Method-by-item instability: cases where method choice changes the linguistic
    conclusion. Estimate this only in row-level datasets with comparable items.
 
 Participant response-style and test-retest estimands are not primary for this
 paper unless a dataset provides the required repeated participant-level
 structure. Do not infer them from published convergence rates or article-level
 summaries.
+
+## Measurement-Model Specification
+
+The generative model is a latent item-level acceptability value for each item,
+observed through a method-specific response function rather than as the same
+value plus noise:
+
+- magnitude estimation: an unbounded ratio / log-linear response (Bard et al.
+  themselves work on the log of estimates);
+- Likert: an ordered-threshold (ordinal) response with bounded support, which
+  can compress differences near the top and bottom of the scale;
+- forced choice: a binary comparison (Thurstonian) response over pairs;
+- yes/no: a binary threshold response;
+- Thurstonian choice: a latent-difference response.
+
+Each method also carries a method-specific noise or bias term. The point of the
+response functions is that censoring and compression at scale boundaries are
+represented in the model, not absorbed into magnitude-estimation noise. A
+resolution advantage for magnitude estimation can then appear as recovery of
+item differences that the bounded response functions cannot express.
+
+### Dimensionality gate (run first, before any method-specific term)
+
+Before adjudicating whether magnitude estimation earns a method-specific term,
+test the single-latent assumption itself on the cross-method item matrix:
+
+1. Compare a one-factor model against a correlated-two-factor and a bifactor
+   model (a general acceptability factor plus method or scale-type factors).
+2. Inspect whether method-pair residuals carry reliable item-level structure
+   beyond what one factor predicts.
+
+Decision rule, fixed in advance:
+
+- If one factor suffices (the multidimensional models do not improve fit by the
+  prespecified criterion and residuals are unstructured), proceed to adjudicate
+  any magnitude-estimation term under the single-signal null.
+- If a multidimensional model fits better, or method residuals carry reliable
+  item structure, the single-latent null is rejected as the wrong measurement
+  model. The question then becomes which methods load on which dimensions and
+  where they diverge. Magnitude estimation is not penalized as noise for
+  carrying a real second dimension, and a divergence consistent with bounded-
+  scale censoring counts toward, not against, the resolution claim.
+
+This gate is the falsifier for unidimensionality. Without it, "magnitude
+estimation must earn its term" presupposes the one-signal model and the method
+can only lose; with it, the model that the comparison assumes is itself at risk.
+
+The projectibility account in the manuscript predicts where this gate should
+break: items where acceptability diverges from correction, register fit, or
+cross-speaker stability are where a single acceptability scalar is most likely to
+be insufficient. That prediction is the empirical work the projectibility framing
+does here, not decoration.
 
 ## Primary Comparisons
 
@@ -111,13 +186,22 @@ aggregation level must be listed as a sensitivity analysis before it is run.
 ## Practical Measurement Advantage
 
 Magnitude estimation counts as having a practical advantage only if it improves
-one of the following over the common-latent-signal null by enough to change the
-paper's substantive conclusion:
+one of the following over the response-function measurement null by enough to
+change the paper's substantive conclusion:
 
+- resolution: recovery of graded item differences that bounded methods censor or
+  compress at the extremes (Bard's actual claim, pp. 32, 35, 41), or a second
+  measurement dimension surviving the dimensionality gate;
 - out-of-sample prediction of item or contrast acceptability;
 - decision stability for theoretically relevant contrasts;
 - convergence with independently published judgments;
 - interpretable reduction in method-specific noise or bias.
+
+Keep these distinct: reliability (test-retest consistency), validity
+(measuring acceptability rather than an artefact), resolution (sensitivity to
+fine gradience), and freedom from scale-boundary censoring are different
+properties. Langsford et al. report magnitude estimation as less reliable; that
+does not settle resolution, which is the dimension Bard's claim lives on.
 
 A small numerical improvement that leaves the same linguistic conclusions in
 place is not a practical advantage. A method-specific advantage that appears
@@ -130,8 +214,13 @@ Use negative controls to detect pipeline artefacts, not as the substantive null:
 
 - shuffle acceptability labels within constrained item sets;
 - permute method labels only where the design makes the permutation meaningful;
-- simulate no-method-advantage data from a common-signal structure and confirm
-  that the analysis does not routinely select magnitude estimation as superior.
+- simulate no-method-advantage data from the response-function generative model
+  (one latent dimension, method-specific links) and confirm that the analysis
+  does not routinely select magnitude estimation as superior;
+- simulate two-dimensional data with bounded-scale censoring and confirm that the
+  dimensionality gate recovers the second dimension rather than missing it. A
+  gate that cannot detect known censoring on simulated data is not trustworthy
+  enough to clear magnitude estimation on real data.
 
 If negative controls produce a strong magnitude-estimation advantage, the
 analysis pipeline is not trustworthy enough to support the paper's main claim.

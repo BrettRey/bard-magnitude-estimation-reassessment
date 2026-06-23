@@ -17,11 +17,19 @@ own claim.
 
 The empirical null should be stronger than scrambled data when the data support
 it. The starting model is that magnitude estimation, Likert ratings, forced
-choice, and Thurstonian choice are noisy observations of a common latent
-item-level acceptability signal. The question is whether magnitude estimation
-adds a practical measurement advantage after accounting for item difficulty,
-task noise, scoring choices, and, where row-level repeated-response data exist,
-participant response style and item-by-method instability.
+choice, and Thurstonian choice observe a common latent item-level acceptability
+signal through method-specific response functions, not the same signal plus
+noise: bounded methods can censor or compress the signal at the extremes, the
+open ratio scale need not. Before any method-specific term is read, the
+single-dimension assumption is itself tested (one-factor versus
+correlated-two-factor and bifactor models, plus method-residual structure). The
+question is then whether magnitude estimation adds a practical advantage, in
+particular on resolution, the distinctions Bard argued fixed scales censor,
+after accounting for item difficulty, the response functions, scoring choices,
+and, where row-level repeated-response data exist, participant response style and
+item-by-method instability. This corrects an earlier framing in which a plain
+common-signal-plus-noise null would have booked any resolution advantage as
+magnitude-estimation noise.
 
 ## Genre gate
 

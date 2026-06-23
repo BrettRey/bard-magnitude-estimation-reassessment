@@ -88,6 +88,15 @@ Review board + Bard ingestion (2026-06-23):
 - Verified Weskott & Fanselow (2011) via Crossref: *Language* 87(2), 249--273, DOI 10.1353/lan.2011.0041; `weskott2011` updated and `/push-bib`-ready.
 - Build clean throughout (7 pages, no undefined citations); style check clean apart from a now-fixed `\citep`->`\parencite`.
 
+Null re-specification (2026-06-23, the board's headline fix):
+
+- Replaced the "common signal plus method noise" null with a response-function measurement model (ME = unbounded ratio link; bounded tasks = ordered-threshold/Thurstonian/binary links), so scale-boundary censoring registers as a resolution advantage instead of being absorbed as ME noise.
+- Added a prespecified dimensionality gate (one-factor vs correlated-two-factor/bifactor; method-residual structure) run before any ME-specific term, with the decision rule in `notes/analysis-charter.md`. This is the falsifier for unidimensionality the reviewers demanded.
+- Made resolution a first-class estimand and advantage criterion (distinct from reliability); fixed the Type S/M framing in §4 (property of estimating a named contrast at a given N, not of a format).
+- Made §6 projectibility predict where the single-scalar model breaks (the same dimensionality gate), added Boyd's "for a purpose" clause; this unifies the theory and empirical halves and answers the "delete §6 and nothing changes" critique.
+- Propagated to §3, §4, §6, §7, `notes/project-brief.md`, `notes/assumptions-and-pressure-test.md`, `notes/analysis-charter.md`. Build clean (8 pages, no undefined citations, no overfull boxes). Analysis remains gated on Sprouse permission; this is design/charter prose only.
+- Remaining board items not yet done: §5 afterlife channel split (CoLA = asterisk channel, not naive-participant measurement); §3-vs-§6 channel-inventory reconciliation + profile identity conditions; genre-lane decision (Registered Report Stage 1 vs theory note); B/G/M confirmation with Sprouse.
+
 Next steps:
 
 1. Wait for Sprouse's reply before treating novel secondary results as publication-ready.
