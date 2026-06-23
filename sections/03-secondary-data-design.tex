@@ -20,6 +20,20 @@ but unless its raw participant responses are obtained it can only constrain the
 paper at the article-summary level. The paper should therefore not promise a
 full response-style or test-retest model across the whole literature.
 
+The Sprouse files also require representation choices before modelling. For
+\textcite{sprouse2013}, the primary forced-choice comparison should use the
+pair-level sign-test file, because forced choice is a pairwise task and that
+file already records judgments against expected patterns. The logistic file
+preserves item-level binary rows, changing the unit of analysis, so it belongs
+as a named sensitivity specification.
+
+For \textcite{sprouse2017}, yes/no rows with item IDs \texttt{B},
+\texttt{G}, and \texttt{M} should be excluded from item-level comparisons.
+They are absent from the materials workbook, occur in repeated early order
+positions for every subject, and do not align with the magnitude-estimation,
+Likert, or forced-choice item universe. This exclusion is a structural
+inclusion rule, not an outcome-based trimming decision.
+
 Before any modelling, each source should be assigned to an estimand it can
 actually answer. The primary estimand is the item-level acceptability signal
 recoverable across methods. Secondary estimands are method-specific noise or

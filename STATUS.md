@@ -57,6 +57,7 @@ Design update:
 - Updated `scripts/build_sprouse_crosswalks.py` to write ignored machine-readable rules in `data/derived/sprouse/analysis_rules.csv` and `data/derived/sprouse/2017_yn_item_inclusion.csv`.
 - Added `scripts/sprouse_analysis_gate.py`, the first outcome-analysis scaffold. It reads the generated machine-readable rules and structural crosswalks, writes ignored readiness manifests, and keeps outcome analysis gated while Sprouse reuse is pending.
 - Ran `scripts/sprouse_analysis_gate.py` with `--reuse-status pending`. It passed the structural checks and failed only the intended `sprouse_reuse_status` gate.
+- Updated the manuscript methods prose in `sections/03-secondary-data-design.tex` and `sections/04-scale-and-reliability.tex` to reflect the fixed 2013 forced-choice representation choice and 2017 yes/no exclusion rule.
 
 Next steps:
 
