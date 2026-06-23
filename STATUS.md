@@ -58,6 +58,9 @@ Design update:
 - Added `scripts/sprouse_analysis_gate.py`, the first outcome-analysis scaffold. It reads the generated machine-readable rules and structural crosswalks, writes ignored readiness manifests, and keeps outcome analysis gated while Sprouse reuse is pending.
 - Ran `scripts/sprouse_analysis_gate.py` with `--reuse-status pending`. It passed the structural checks and failed only the intended `sprouse_reuse_status` gate.
 - Updated the manuscript methods prose in `sections/03-secondary-data-design.tex` and `sections/04-scale-and-reliability.tex` to reflect the fixed 2013 forced-choice representation choice and 2017 yes/no exclusion rule.
+- Replaced the placeholder abstract, opening problem section, and Bard-target section with source-gated framing prose.
+- Added an evidence-routing table to `sections/03-secondary-data-design.tex` distinguishing Bard article evidence, Sprouse row-level comparison data, Langsford article-level reliability evidence, and benchmark afterlife evidence.
+- Rebuilt `main.pdf`; the final log scan found no undefined citations, no overfull boxes, no underfull boxes, and only the existing template-level `fancyhdr`/`microtype` warnings.
 
 Next steps:
 
