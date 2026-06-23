@@ -79,6 +79,15 @@ Evaluation pass (post-draft):
 - Confirmed TESL framing is dropped by decision.
 - Rebuilt `main.pdf` (7 pages); log scan shows no undefined citations; `weskott2011`, `Goodman1955`, `schutze2016`, and `sprouse2017` all resolve in the bibliography.
 
+Review board + Bard ingestion (2026-06-23):
+
+- Ran a six-reviewer simulated board (Sprouse, Sorace, Featherston, Navarro, Schütze, plus the mandatory projectibility reviewer). Unanimous Revise & Resubmit. Full reviews and synthesis in `reviews/review-board-2026-06-23.md`.
+- Headline finding: five of six independently flagged the common-latent-signal null as begging the question / rigged against ME (it assumes one latent scalar; bounded scales may censor gradience, not just add noise). The convergent fix (method-specific response functions + a prespecified dimensionality test that can falsify unidimensionality) also makes §6 projectibility load-bearing and supplies a genuinely new estimand. This null re-specification is the main open task, not yet started.
+- Obtained the full Bard (1996) article (Brett supplied the JSTOR scan); moved PDF + markdown + images into `literature/Bard-MagnitudeEstimationLinguistic-1996.*`. The markdown preserves journal page numbers.
+- Rewrote §2 from the primary text, page-anchored: abstract four-part claim (p. 32), the scale-type diagnosis ("wrong kind of measurement scale," p. 32; fixed scales "predetermine the number of distinctions," p. 35), the open-ended ratio rationale (p. 41), and Bard's own hedges ("considerable empirical cost"; "the data currently do not decide between them," p. 65). Corrected the framing: Bard's claim is a specific resolution-over-fixed-scales argument, not the broad "privileged formal method" reception. Added p. 32 anchors to §4 and §7; resolved the §2 TODO.
+- Verified Weskott & Fanselow (2011) via Crossref: *Language* 87(2), 249--273, DOI 10.1353/lan.2011.0041; `weskott2011` updated and `/push-bib`-ready.
+- Build clean throughout (7 pages, no undefined citations); style check clean apart from a now-fixed `\citep`->`\parencite`.
+
 Next steps:
 
 1. Wait for Sprouse's reply before treating novel secondary results as publication-ready.

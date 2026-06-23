@@ -15,11 +15,17 @@ or analyse a source until it has been verified against an authoritative page.
   - Verification note:
     - Cambridge/Crossref now supply DOI `10.2307/416793`; the Edinburgh record still says "No DOI for article", so cite the DOI but preserve the discrepancy in notes if needed.
   - Public participant-level data:
-    - Not found in this first pass on Cambridge, Edinburgh, JSTOR, or Crossref-linked records.
-  - Source-grounded claim target:
-    - Cambridge and the HCRC research-paper abstract both say magnitude estimation is shown to solve measurement-scale problems of conventional techniques, make fine distinctions robustly enough for statistically significant linguistic results, work with naive speaker-hearers, and replicate across groups.
-    - Treat this as the documented Bard target. Do not paraphrase it as a blanket claim that magnitude estimation is the uniquely privileged or universally superior method unless the full article text or a reception source is cited for that stronger reading.
-  - Current role: conceptual target and historical claim source, not confirmed raw-data source.
+    - Not found on Cambridge, Edinburgh, JSTOR, or Crossref-linked records. No open-access full text exists (Edinburgh record: "content not online, for subscribers only").
+  - Full text obtained and read (2026-06-23):
+    - PDF, markdown conversion, and image folder now in `literature/Bard-MagnitudeEstimationLinguistic-1996.{pdf,md}` (+ `_images`). The markdown preserves journal page numbers, so quotations are page-anchorable directly.
+    - Brett supplied the JSTOR scan (Stable URL <https://www.jstor.org/stable/416793>); not committed to this repo.
+  - Source-grounded claim target (now page-anchored):
+    - Abstract (p. 32): ME "solve[s] the measurement scale problems which plague conventional techniques," provides "data which make fine distinctions robustly enough to yield statistically significant results of linguistic interest," is "usable in a consistent way by linguistically naive speaker-hearers," and allows "replication across groups of subjects."
+    - The case is a scale-type / resolution argument: the problem is "the use of the wrong kind of measurement scale" (p. 32); fixed-point scales "predetermine[] the number of distinctions subjects may use" and censor finer ones (p. 35); ME "does not restrict the number of values" and gives "complete freedom about which of the infinite set of numbers to use," yielding interval/ratio data (p. 41).
+    - Comparison class is informal asterisk annotation and fixed-point scales, NOT the later Likert/forced-choice/yes-no/Thurstonian inventory. So Bard's superiority claim is specifically resolution-over-fixed-scales; the broader "ME is the privileged formal method in general" is a reception extrapolation.
+    - Bard et al. are tentative: advantages "are garnered at considerable empirical cost" (p. 65); the underlying psychological model is left open ("the data currently do not decide between them," p. 65).
+    - §2 now page-anchors these (pp. 32, 35, 41, 65); §4 and §7 cite p. 32 for the four-part claim. The §2 page-anchor TODO is resolved.
+  - Current role: conceptual target and historical claim source, now read in full; still not a raw-data source.
 
 ## Later method-comparison base
 
@@ -84,11 +90,13 @@ or analyse a source until it has been verified against an authoritative page.
     - Raw participant-response data not found after this targeted pass. Treat availability as not public unless an author-controlled repository or author reply surfaces.
   - Current role: article-level empirical base for reliability, response-style analysis, and the non-privileged status of magnitude estimation. Do not plan participant-level reanalysis, response-style modelling, or test-retest modelling from this paper unless raw rows are obtained.
 
-- [~] Weskott and Fanselow (2011), "On the informativity of different measures of linguistic acceptability."
-  - Metadata source: Schütze (2016), in-text at p. 208 and full reference at p. 268 of `literature/schutze2016.md` (a verified secondary source).
+- [x] Weskott and Fanselow (2011), "On the informativity of different measures of linguistic acceptability."
+  - Metadata first sourced from Schütze (2016), in-text at p. 208 and full reference at p. 268 of `literature/schutze2016.md`.
+  - Verified against Crossref (DOI registration authority) on 2026-06-23:
     - Thomas Weskott and Gisbert Fanselow.
-    - *Language* 87, 249--273.
-    - Issue number and DOI not yet captured; verify against Project MUSE/JSTOR before `/push-bib`.
+    - *Language* 87(2), 249--273 (June 2011).
+    - DOI: <https://doi.org/10.1353/lan.2011.0041>.
+    - `references-local.bib` entry `weskott2011` updated with issue 2 and the verified DOI; ready for `/push-bib`.
   - Why it matters: Schütze (2016: 208) states that magnitude estimation's touted advantages over the Likert task have "most or all" been "subsequently refuted," citing this paper and Sprouse, Schütze, and Almeida (2013). This is the canonical anti-ME empirical result the reassessment must engage.
   - Added to `references-local.bib` as `weskott2011` with a verification-pending comment.
   - Current role: prior-art anchor for the marginal-contribution claim. Verify primary metadata and, ideally, read the paper before relying on any specific finding beyond Schütze's characterization.
