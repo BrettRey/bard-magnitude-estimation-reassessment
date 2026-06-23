@@ -95,7 +95,11 @@ Null re-specification (2026-06-23, the board's headline fix):
 - Made resolution a first-class estimand and advantage criterion (distinct from reliability); fixed the Type S/M framing in §4 (property of estimating a named contrast at a given N, not of a format).
 - Made §6 projectibility predict where the single-scalar model breaks (the same dimensionality gate), added Boyd's "for a purpose" clause; this unifies the theory and empirical halves and answers the "delete §6 and nothing changes" critique.
 - Propagated to §3, §4, §6, §7, `notes/project-brief.md`, `notes/assumptions-and-pressure-test.md`, `notes/analysis-charter.md`. Build clean (8 pages, no undefined citations, no overfull boxes). Analysis remains gated on Sprouse permission; this is design/charter prose only.
-- Remaining board items not yet done: §5 afterlife channel split (CoLA = asterisk channel, not naive-participant measurement); §3-vs-§6 channel-inventory reconciliation + profile identity conditions; genre-lane decision (Registered Report Stage 1 vs theory note); B/G/M confirmation with Sprouse.
+- Did §5 afterlife channel split (portability via expert channel survived into CoLA/BLiMP; graded naive-participant measurement migrated only into crowdsourced SAD).
+- Did §6 profile identity conditions (profile = structure of licensed inferences, not the average of channels; disagreement adjudicated by which inferences hold) and disambiguated the §3 "sources" vs §6 "channels" wording with a cross-reference.
+- House-style: "data" now singular in main.tex and §3.
+- Build clean (8 pages, no undefined cites/refs, no overfull boxes).
+- Remaining board items: GENRE-LANE DECISION (Registered Report Stage 1 vs theory/methodology note) -- this is Brett's call, surfaced 2026-06-23; B/G/M confirmation is blocked on Sprouse's reply to the reuse email.
 
 Next steps:
 
