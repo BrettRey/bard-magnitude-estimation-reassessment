@@ -24,3 +24,4 @@
 - Preserve original Sprouse identifiers in scripts. Spacing-normalized keys may be used only as explicit candidate crosswalk fields, not as silent recoding.
 - Use `FC.signtest.csv` as the primary 2013 forced-choice representation because it is already pair-level and aligns with the pair-level ME/LS crosswalk. Use `FC.logistic.csv` only as a named sensitivity representation.
 - Exclude 2017 yes/no item IDs `B`, `G`, and `M` from item-level comparisons because they are absent from the materials workbook, appear at repeated early order positions, and do not align with the ME/LS/FC item universe.
+- Require the Sprouse analysis gate to pass before any substantive outcome script is treated as primary. While reuse is pending, the gate may verify structure but should keep method rankings, convergence estimates, means, and model fits closed.

@@ -55,10 +55,12 @@ Design update:
 - Fixed pre-analysis representation rules: `FC.signtest.csv` is the primary 2013 forced-choice representation; `FC.logistic.csv` is a named sensitivity representation.
 - Fixed pre-analysis 2017 YN inclusion rule: exclude `B`, `G`, and `M` from item-level comparisons, leaving 786 yes/no items aligned with the ME/LS/FC item universe.
 - Updated `scripts/build_sprouse_crosswalks.py` to write ignored machine-readable rules in `data/derived/sprouse/analysis_rules.csv` and `data/derived/sprouse/2017_yn_item_inclusion.csv`.
+- Added `scripts/sprouse_analysis_gate.py`, the first outcome-analysis scaffold. It reads the generated machine-readable rules and structural crosswalks, writes ignored readiness manifests, and keeps outcome analysis gated while Sprouse reuse is pending.
+- Ran `scripts/sprouse_analysis_gate.py` with `--reuse-status pending`. It passed the structural checks and failed only the intended `sprouse_reuse_status` gate.
 
 Next steps:
 
-1. Draft the first outcome-analysis script skeleton so it reads `analysis_rules.csv` before computing any summaries, but keep substantive runs gated pending Sprouse's reply.
-2. Wait for Sprouse's reply before treating novel secondary results as publication-ready.
+1. Wait for Sprouse's reply before treating novel secondary results as publication-ready.
+2. If reuse is approved or the analysis is explicitly verification-only, add the first substantive analysis script after the gate reads as open.
 3. Search one more time for Langsford raw data only if the paper needs participant-level test-retest/response-style modelling; otherwise treat Langsford as article-level evidence.
 4. Move project-specific BibTeX entries to the central bibliography later if they become reusable outside this project.
