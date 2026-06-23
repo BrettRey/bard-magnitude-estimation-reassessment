@@ -67,6 +67,18 @@ Design update:
 - Reframed the grammar/acceptability discussion around grammar as a system of projectibility profiles: acceptability judgments are now treated as one evidential route into grammaticality rather than as the whole target.
 - Updated `notes/project-brief.md` and `notes/assumptions-and-pressure-test.md` so the projectibility-profile theory is part of the project route and pressure-test surface.
 
+Evaluation pass (post-draft):
+
+- Read the full built manuscript and evaluated it as an artifact, not just the plans.
+- Added a prior-art and marginal-contribution beat to `sections/01-problem.tex`: the methodology literature has already deflated ME's special status (Schütze 2016: 208, citing Weskott & Fanselow 2011 and Sprouse et al. 2013; plus Sprouse & Almeida 2017 on power and Langsford et al. 2018 on reliability), so the contribution is the construct-level reframing and prespecified estimand routing, not the bare verdict.
+- Added `weskott2011` to `references-local.bib` with metadata from Schütze (2016) and a verification-pending comment; logged it in `notes/source-verification.md`.
+- Reframed the abstract so the Sprouse analysis reads as prespecified and gated on reuse permission rather than already performed.
+- Tightened `sections/04-scale-and-reliability.tex` so it inherits the unit-of-analysis charter from section 3 instead of restating the 2013/2017 representation rules.
+- Added the Goodman (1955) citation at the first mention of projectibility in `sections/06-grammaticality-and-acceptability.tex`.
+- Added a `% TODO` in `sections/02-bard-target.tex` to page-anchor the Bard characterization once the article PDF is in the literature folder (currently reconstructed; no primary page citation).
+- Confirmed TESL framing is dropped by decision.
+- Rebuilt `main.pdf` (7 pages); log scan shows no undefined citations; `weskott2011`, `Goodman1955`, `schutze2016`, and `sprouse2017` all resolve in the bibliography.
+
 Next steps:
 
 1. Wait for Sprouse's reply before treating novel secondary results as publication-ready.

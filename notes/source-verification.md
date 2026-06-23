@@ -84,6 +84,15 @@ or analyse a source until it has been verified against an authoritative page.
     - Raw participant-response data not found after this targeted pass. Treat availability as not public unless an author-controlled repository or author reply surfaces.
   - Current role: article-level empirical base for reliability, response-style analysis, and the non-privileged status of magnitude estimation. Do not plan participant-level reanalysis, response-style modelling, or test-retest modelling from this paper unless raw rows are obtained.
 
+- [~] Weskott and Fanselow (2011), "On the informativity of different measures of linguistic acceptability."
+  - Metadata source: Schütze (2016), in-text at p. 208 and full reference at p. 268 of `literature/schutze2016.md` (a verified secondary source).
+    - Thomas Weskott and Gisbert Fanselow.
+    - *Language* 87, 249--273.
+    - Issue number and DOI not yet captured; verify against Project MUSE/JSTOR before `/push-bib`.
+  - Why it matters: Schütze (2016: 208) states that magnitude estimation's touted advantages over the Likert task have "most or all" been "subsequently refuted," citing this paper and Sprouse, Schütze, and Almeida (2013). This is the canonical anti-ME empirical result the reassessment must engage.
+  - Added to `references-local.bib` as `weskott2011` with a verification-pending comment.
+  - Current role: prior-art anchor for the marginal-contribution claim. Verify primary metadata and, ideally, read the paper before relying on any specific finding beyond Schütze's characterization.
+
 ## Contemporary afterlife
 
 - [x] CoLA.
