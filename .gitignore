@@ -1,0 +1,27 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Analysis caches and local data products
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+.ipynb_checkpoints/
+data/raw/*
+data/derived/*
+!data/raw/.gitkeep
+!data/derived/.gitkeep
+
+# OS/editor
+.DS_Store
+*.swp

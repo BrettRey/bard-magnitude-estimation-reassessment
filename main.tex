@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+% House style preamble: central symlink only.
+\input{.house-style/preamble.tex}
+
+% Anonymization toggle for double-blind review.
+\newif\ifblind
+\ifdefined\blindbuild \blindtrue \else \blindfalse \fi
+
+\hypersetup{
+  pdftitle={Was magnitude estimation necessary? A secondary-data reassessment of Bard, Robertson, and Sorace (1996)},
+  pdfkeywords={magnitude estimation, acceptability judgments, grammaticality judgments, secondary data, experimental syntax}
+}
+\ifblind\hypersetup{pdfauthor={}}\fi
+
+\title{Was magnitude estimation necessary?\\
+{\large A secondary-data reassessment of Bard, Robertson, and Sorace (1996)}}
+\ifblind
+  \author{[Author name, ORCID, and affiliation removed for double-blind review]}
+\else
+  \author{Brett Reynolds \orcidlink{0000-0003-0073-7195}%
+  \thanks{Contact: \href{mailto:brett.reynolds@humber.ca}{brett.reynolds@humber.ca}}\\
+  Humber Polytechnic \& University of Toronto}
+\fi
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+TODO: Draft after the source and dataset inventory is verified. The likely
+contribution is a no-new-data reassessment of the Bard, Robertson, and Sorace
+measurement program: acceptability judgments are graded, measurable, and
+methodologically non-trivial, but magnitude estimation may not have the
+privileged status once claimed for it. The paper should distinguish
+reproduction, secondary analysis, conceptual replication, and theoretical
+revision.
+\end{abstract}
+
+\noindent\textbf{Keywords:} magnitude estimation; acceptability judgments; grammaticality judgments; secondary data; experimental syntax
+
+\input{sections/01-problem}
+\input{sections/02-bard-target}
+\input{sections/03-secondary-data-design}
+\input{sections/04-scale-and-reliability}
+\input{sections/05-contemporary-afterlife}
+\input{sections/06-grammaticality-and-acceptability}
+\input{sections/07-conclusion}
+
+\section*{Data and code availability}
+
+No data has been downloaded or analysed in this setup draft. The intended
+project uses reusable public datasets where licensing and documentation permit
+it; source and dataset verification are tracked in
+\texttt{notes/source-verification.md}.
+
+\section*{Acknowledgements}
+
+TODO: Add final AI-use disclosure with the actual model list used on the
+project.
+
+\clearpage
+\printbibliography
+
+\end{document}
