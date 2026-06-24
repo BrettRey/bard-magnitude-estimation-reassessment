@@ -102,6 +102,12 @@ Null re-specification (2026-06-23, the board's headline fix):
 - Genre lane: Brett chose to HOLD the hybrid until Sprouse replies (permission pending, not denied). Revisit RR-Stage-1 vs theory-note when the reuse answer lands. Do not submit in hybrid state.
 - B/G/M confirmation also blocked on Sprouse's reply. With genre held and B/G/M blocked, the paper is at a clean pause point: every review-board item is either resolved or waiting on Sprouse.
 
+Shutdown resync (Codex, 2026-06-23 19:55 EDT):
+
+- Confirmed the pre-shutdown source state was clean and aligned with `origin/main` at `680bea0`.
+- No new manuscript or methodological decisions were made in the resync session.
+- Current state remains a clean pause point: wait for Sprouse's data-reuse reply before novel outcome analysis, B/G/M confirmation, or a final genre-lane choice.
+
 Next steps:
 
 1. Wait for Sprouse's reply before treating novel secondary results as publication-ready.
