@@ -89,6 +89,7 @@ or analyse a source until it has been verified against an authoritative page.
     - OSF/PsyArXiv API record `vrfxn_v1` has `has_data_links: null`, `data_links: null`, and no associated OSF node.
     - OSF storage for the preprint contains only `2018_grammaticality.pdf` in the root listing on this pass.
     - Andrew Perfors's publication page links PDF, project page, PsyArXiv, and the published article, but no dataset/code button. Danielle Navarro's publication page likewise links PDF, DOI, and PsyArXiv, but not OSF/GitHub/data for this paper.
+    - Final targeted pass on 2026-07-07 rechecked the Glossa article page, article PDF/XML, supplementary file `gjgl-3-396-s1.pdf`, Danielle Navarro's publication page, and OSF/PsyArXiv node/registration routes for `vrfxn`; no public raw participant-response rows or analysis code were located. The supplement remains corpus and Thurstonian-model documentation only.
     - Raw participant-response data not found after this targeted pass. Treat availability as not public unless an author-controlled repository or author reply surfaces.
   - Current role: article-level empirical base for reliability, response-style analysis, and the non-privileged status of magnitude estimation. Do not plan participant-level reanalysis, response-style modelling, or test-retest modelling from this paper unless raw rows are obtained.
 
@@ -163,6 +164,6 @@ or analyse a source until it has been verified against an authoritative page.
 - Bard et al. original raw or summarized data remains unresolved. The source-grounded Bard target is the abstract-level claim that magnitude estimation solves scale problems and yields robust fine distinctions.
 - Sprouse et al. 2013 public participant-level data is verified on Jon Sprouse's current author site; limited secondary reuse was approved by Jon Sprouse on 2026-07-07 after checking with Diogo Almeida.
 - Sprouse and Almeida 2017 public participant-level data is verified on Jon Sprouse's current author site; limited secondary reuse was approved by Jon Sprouse on 2026-07-07 after checking with Diogo Almeida.
-- Langsford et al. raw participant-response data was not found after Glossa, supplement, author pages, and OSF/PsyArXiv API checks; stimulus/corpus/model supplement is verified.
+- Langsford et al. raw participant-response data was not found after Glossa, supplement, author pages, and OSF/PsyArXiv API checks, including the final targeted pass on 2026-07-07; stimulus/corpus/model supplement is verified.
 - CoLA publication and dataset citation are verified; license/fair-use limits must be stated if reused.
 - Any later datasets that directly compare magnitude estimation, Likert, forced-choice, and Thurstonian measures.

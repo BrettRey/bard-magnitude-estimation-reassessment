@@ -47,6 +47,33 @@
   response-function diagnostics have run, and the current results are strong
   enough to report without waiting for a fuller participant-level model that
   the available cross-study data cannot support.
+- Keep Table `sprouse-diagnostics` as the results display for now rather than
+  adding a compact figure. Reason: the diagnostics are low-dimensional and the
+  table already carries the relevant convergence, dimensionality,
+  response-function, and pair-robustness pattern; a scatter or endpoint figure
+  would add page cost without changing the interpretation. Revisit only if a
+  reviewer asks for a visual or a later model produces a new pattern.
+- Treat Langsford et al. (2018) as article-level evidence only after the final
+  raw-data pass. Reason: the Glossa article page exposes PDF/XML and a
+  supplementary appendix PDF, the supplement contains corpus and Thurstonian
+  model details rather than raw participant-response rows, Danielle Navarro's
+  publication page links PDF/DOI/PsyArXiv but not data or code for this paper,
+  and normal OSF node/registration API routes for `vrfxn` return not found.
+- Present the Sprouse dimensionality result as a first-pass aggregate diagnostic
+  only. Reason: the implemented gate uses aggregate item and contrast matrices
+  to check whether an obvious multidimensional rescue for magnitude estimation
+  appears in the available Sprouse summaries; it is not a full participant-level
+  factor model across Bard, Sprouse, and Langsford.
+- Treat the 2026-07-07 review board as a next-round R&R map, not as a ship
+  blocker. Reason: all six reviewers judged the core argument fair and viable
+  while asking for more operational, reproducibility, benchmark-construction,
+  and projectibility-payoff detail; those are revision targets rather than
+  reasons to hold this checkpoint.
+- Use "analysis-chartered" / "charter fixed before outcome analysis" rather than
+  "prespecified" in the manuscript unless the charter's external provenance is
+  later documented. Reason: the analysis charter was a real pre-outcome
+  commitment device, but the current manuscript should not imply external
+  preregistration.
 
 ## 2026-06-23
 

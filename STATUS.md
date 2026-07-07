@@ -242,18 +242,53 @@ Sprouse permission and gate opening (2026-07-07):
   references, no overfull boxes, and no underfull boxes. Remaining warnings are
   the existing template-level `fancyhdr` headheight/E-option warnings and the
   existing `microtype` footnote patch warning.
+- Editorial display decision: keep Table `sprouse-diagnostics` for now rather
+  than adding a compact figure. The table already states the convergence,
+  dimensionality, response-function, and pair-robustness pattern; a figure would
+  mostly repeat the same result at a page cost.
+- Langsford final raw-data check (2026-07-07): rechecked the Glossa article
+  page/PDF/XML, supplementary file `gjgl-3-396-s1.pdf`, Danielle Navarro's
+  publication page, and OSF/PsyArXiv routes for `vrfxn`. No public raw
+  participant-response rows or analysis code were found. The supplement remains
+  corpus and Thurstonian-model documentation only, so Langsford stays
+  article-level evidence in this paper.
+- Focused review pass completed after the post-ship checkpoint. The abstract,
+  Section 4, conclusion, and data/code availability language now make the
+  Sprouse result more explicitly scoped: no systematic practical ME resolution
+  advantage in these data, and the dimensionality result is a first-pass
+  aggregate diagnostic rather than a full participant-level factor model.
+- Added the final AI-use disclosure in the acknowledgements, naming OpenAI Codex
+  (GPT-5) and Claude Opus for the recorded project uses. The manuscript no
+  longer has a TODO marker.
+- Rebuilt `main.pdf` after the review edits. The build remains 9 pages. Final
+  scans found no TODO/FIXME markers, no undefined citations or references, no
+  overfull boxes, and no underfull boxes. Remaining warnings are the existing
+  template-level `fancyhdr` headheight/E-option warnings and the existing
+  `microtype` footnote patch warning.
+- Ran a six-role independent Codex/GPT review board and saved the report at
+  `reviews/review-board-20260707-194612.md`. Verdict was unanimous Revise &
+  Resubmit, with no rejects. Consensus strengths: fair Bard target, disciplined
+  evidential routing, fair response-function null, useful data/AI disclosures,
+  and a non-decorative projectibility section. Consensus next-round revisions:
+  add empirical diagnostic detail and operational thresholds, keep
+  dimensionality language soft, add stronger reproducibility/provenance detail,
+  expand benchmark construction detail, and cash out the projectibility payoff
+  earlier and in the conclusion.
+- Applied two low-risk board-driven patches before shipping: replaced
+  "prespecified" manuscript wording with analysis-charter wording and named Jon
+  Sprouse/Diogo Almeida in the reuse-permission disclosure; softened the SAD
+  afterlife sentence to avoid implying a direct historical migration from Bard.
+- Added a local reproduction recipe to `analysis/README.md`, including the
+  expected `/tmp/bard-data-check` layout and the analysis command sequence. Raw
+  participant-level data remains uncommitted and non-redistributed.
 
 Next steps:
 
-1. Decide whether Table `sprouse-diagnostics` is enough or whether the paper
-   needs one compact figure from the ignored derived outputs.
-2. Decide whether to search one more time for Langsford raw data. Do this only
-   if the paper needs participant-level test-retest/response-style modelling;
-   otherwise treat Langsford as article-level evidence.
-3. Add the final AI-use disclosure in acknowledgements before submission.
-4. Move project-specific BibTeX entries to the central bibliography later if
+1. Move project-specific BibTeX entries to the central bibliography later if
    they become reusable outside this project.
-5. Commit and push once Brett is satisfied with the results-paper direction.
+2. Next manuscript revision: address the review-board R&R items, especially
+   operational practical-advantage thresholds and reproducibility/provenance
+   detail.
 
 ## Literature Hooks
 
