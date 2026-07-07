@@ -36,17 +36,22 @@ magnitude-estimation noise.
 The current data map sets a hard boundary on the kind of paper this can be.
 Bard participant-level data has not been found. Sprouse et al. (2013) and
 Sprouse and Almeida (2017) participant-level method-comparison rows are public
-on Jon Sprouse's author site, with a request to contact him about novel reuse.
+on Jon Sprouse's author site. Jon Sprouse approved Brett's limited secondary
+use of these files on 2026-07-07 after checking with Diogo Almeida, with the
+boundary that raw participant-level files should not be redistributed and that
+the project should stay focused on magnitude estimation's contribution to an
+item-level signal unless Sprouse/Almeida are consulted again.
 Langsford et al. (2018) raw participant-response rows have not been found after
 checking Glossa, the supplement, author publication pages, and the OSF/PsyArXiv
 API.
 
 That means the feasible paper is not a full re-fit of the Bard/Sprouse/Langsford
 measurement universe. Its strongest current form is a constrained secondary
-reassessment: reanalyse Sprouse row-level data for method comparison, use
-Langsford as article-level evidence about reliability and response-style risks,
-and keep the full Gelmanian latent/response-style/test-retest model conditional
-on obtaining additional raw data.
+reassessment with approved Sprouse reanalysis: reanalyse Sprouse row-level data
+for method comparison, use Langsford as article-level evidence about
+reliability and response-style risks, and keep the full Gelmanian
+latent/response-style/test-retest model conditional on obtaining additional raw
+data.
 
 ## Contribution
 

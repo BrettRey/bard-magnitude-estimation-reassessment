@@ -51,7 +51,8 @@ or analyse a source until it has been verified against an authoritative page.
       - `FC experiment/FC.signtest.csv`: `participant,survey,order,judgment,item,condition,expected,pattern`.
       - `LS experiment/LI.ls.results.csv`: `participant,survey,order,judgment,item,condition,zscores`.
       - `ME experiment/LI.me.results.csv`: `participant,survey,order,judgment,item,condition,zscores`.
-    - File headers say the data are provided for verification and ask researchers to contact Jon Sprouse about novel research reuse. Treat local downloads as verification copies only; do not commit raw data until reuse/licensing is resolved.
+    - File headers say the data are provided for verification and ask researchers to contact Jon Sprouse about novel research reuse.
+    - Reuse permission: approved by Jon Sprouse in correspondence reported by Brett on 2026-07-07, after Sprouse checked with Diogo Almeida. Boundary: limited secondary methodological analysis of magnitude estimation's contribution to an item-level signal; do not redistribute participant-level raw files; cite the original papers and data source clearly; reach back out if the project drifts toward a different topic closer to Sprouse/Almeida's current interests.
   - Current role: empirical base for method convergence across magnitude estimation, Likert ratings, and forced choice.
 
 - [x] Sprouse and Almeida (2017), "Design sensitivity and statistical power in acceptability judgment experiments."
@@ -66,7 +67,8 @@ or analyse a source until it has been verified against an authoritative page.
     - Verified zip contents include `FC.results.csv`, `LS.results.csv`, `ME.results.csv`, and `YN.results.csv`.
     - CSV headers use subject-level rows (`subject,survey,order,...`) for forced choice, Likert, magnitude estimation, and yes/no tasks.
     - File headers carry the same verification-purpose and author-contact caveat as the 2013 data.
-  - Current role: public row-level method-comparison data that can support a constrained secondary reanalysis, subject to reuse permission.
+    - Reuse permission: approved by Jon Sprouse in correspondence reported by Brett on 2026-07-07, after Sprouse checked with Diogo Almeida. Same boundary as the 2013 data: limited secondary methodological analysis, no redistribution of participant-level raw files, clear citation, and renewed contact if the project drifts from the approved scope.
+  - Current role: public row-level method-comparison data that can support a constrained secondary reanalysis within the approved permission boundary.
 
 - [x] Langsford et al. (2018), "Quantifying sentence acceptability measures: Reliability, bias, and variability."
   - Verified metadata:
@@ -159,8 +161,8 @@ or analyse a source until it has been verified against an authoritative page.
 ## Search targets
 
 - Bard et al. original raw or summarized data remains unresolved. The source-grounded Bard target is the abstract-level claim that magnitude estimation solves scale problems and yields robust fine distinctions.
-- Sprouse et al. 2013 public participant-level data is verified on Jon Sprouse's current author site, with author-contact caveat for novel reuse.
-- Sprouse and Almeida 2017 public participant-level data is verified on Jon Sprouse's current author site, with author-contact caveat for novel reuse.
+- Sprouse et al. 2013 public participant-level data is verified on Jon Sprouse's current author site; limited secondary reuse was approved by Jon Sprouse on 2026-07-07 after checking with Diogo Almeida.
+- Sprouse and Almeida 2017 public participant-level data is verified on Jon Sprouse's current author site; limited secondary reuse was approved by Jon Sprouse on 2026-07-07 after checking with Diogo Almeida.
 - Langsford et al. raw participant-response data was not found after Glossa, supplement, author pages, and OSF/PsyArXiv API checks; stimulus/corpus/model supplement is verified.
 - CoLA publication and dataset citation are verified; license/fair-use limits must be stated if reused.
 - Any later datasets that directly compare magnitude estimation, Likert, forced-choice, and Thurstonian measures.

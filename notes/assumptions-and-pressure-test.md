@@ -76,11 +76,11 @@ each dataset can answer:
 - method-by-item instability where the elicitation method changes the
   linguistic conclusion.
 
-As of the current verification pass, Sprouse 2013 and Sprouse and Almeida 2017
-can support row-level secondary analysis, subject to the author-contact caveat
-for novel reuse. Langsford 2018 can support article-level synthesis unless raw
-participant rows are obtained. CoLA, BLiMP, and SAD can support only the
-afterlife/construct discussion.
+As of 2026-07-07, Sprouse 2013 and Sprouse and Almeida 2017 can support
+row-level secondary analysis within Jon Sprouse's approved reuse boundary,
+after he checked with Diogo Almeida. Langsford 2018 can support article-level
+synthesis unless raw participant rows are obtained. CoLA, BLiMP, and SAD can
+support only the afterlife/construct discussion.
 
 ## Forking-path controls
 

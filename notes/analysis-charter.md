@@ -1,9 +1,14 @@
 # Analysis Charter
 
-Status: active pre-analysis checkpoint after Roughdraft review. This charter
-freezes the primary analysis choices before any new row-level modelling or
-visualization of the Sprouse data. Later deviations are allowed, but they must
-be labelled exploratory in the paper and in the analysis notes.
+Status: active analysis charter after Roughdraft review. This charter froze the
+primary analysis choices before any new row-level modelling or visualization of
+the Sprouse data. Later deviations are allowed, but they must be labelled
+exploratory in the paper and in the analysis notes.
+
+Permission update (2026-07-07): Jon Sprouse approved Brett's limited secondary
+use of the public 2013 and 2017 data files after checking with Diogo Almeida.
+This opens the outcome-analysis gate within the approved methodological scope;
+it does not change the estimands or representation choices fixed below.
 
 ## Purpose
 
@@ -42,14 +47,14 @@ null from being rigged against the claim under test.
   - Methods: magnitude estimation, 7-point Likert scale, forced choice.
   - Role: main test of method-specific practical advantage on a later
     acceptability-judgment dataset.
-  - Constraint: data files ask researchers to contact Jon Sprouse about novel
-    reuse. Treat downloaded files as verification copies until reuse is
-    resolved.
+  - Constraint: reuse approved for the limited secondary methodological
+    analysis. Do not redistribute participant-level raw files; reach back out
+    if the project drifts from the approved scope.
 - Sprouse and Almeida (2017): secondary row-level analysis base.
   - Methods: magnitude estimation, Likert scale, forced choice, yes/no.
   - Role: generalization and design-sensitivity check, not the main historical
     test of Bard's claim.
-  - Constraint: same author-contact caveat.
+  - Constraint: same approved reuse boundary as the 2013 data.
 
 ### Included without row-level reanalysis
 

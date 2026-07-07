@@ -108,12 +108,152 @@ Shutdown resync (Codex, 2026-06-23 19:55 EDT):
 - No new manuscript or methodological decisions were made in the resync session.
 - Current state remains a clean pause point: wait for Sprouse's data-reuse reply before novel outcome analysis, B/G/M confirmation, or a final genre-lane choice.
 
+Sprouse permission and gate opening (2026-07-07):
+
+- Brett received Jon Sprouse's reply approving use of the public Sprouse,
+  Schuetze, and Almeida (2013) and Sprouse and Almeida (2017) data files for the
+  limited secondary analysis of magnitude estimation's contribution to an
+  item-level signal, after Sprouse checked with Diogo Almeida.
+- Permission boundary logged: do not redistribute participant-level raw files;
+  cite the original papers and data source clearly; reach back out if the
+  project drifts away from the ME/item-level-signal question toward a topic
+  closer to Sprouse or Almeida's current interests.
+- Created and Roughdraft-reviewed
+  `notes/sprouse-approved-analysis-plan.md`; review completed with no
+  CriticMarkup changes to resolve.
+- Refreshed the public Sprouse working copies under `/tmp/bard-data-check` from
+  Jon Sprouse's author-site links. Raw files remain outside Git.
+- Re-ran `scripts/build_sprouse_crosswalks.py` against the fresh downloads. The
+  structural checks reproduced the previous state: 150 2013 condition pairs, all
+  matched after compact spacing-key handling; 2017 yes/no-only IDs remain `B`,
+  `G`, and `M`, leaving 786 aligned yes/no items.
+- Re-ran `scripts/sprouse_analysis_gate.py --reuse-status approved`; all
+  readiness gates passed.
+- Added `analysis/sprouse_item_signal.py`, the first approved descriptive
+  item/contrast signal script. It requires the approved readiness gate, reads
+  the fresh `/tmp/bard-data-check` working copies, and writes only ignored
+  derived outputs under `data/derived/sprouse_analysis/`.
+- Ran `analysis/sprouse_item_signal.py --raw-root /tmp/bard-data-check`. It
+  wrote `sprouse_item_method_aggregates.csv`, `sprouse_item_signal_matrix.csv`,
+  `sprouse_pair_contrasts.csv`, `sprouse_signal_correlations.csv`,
+  `sprouse_me_disagreements.csv`, and `sprouse_analysis_manifest.csv` under the
+  ignored derived directory.
+- First descriptive signal check: 2013 ME-Likert condition correlation is
+  `r = .986` over 298 conditions; 2013 pair contrasts correlate `r = .963`
+  between ME and Likert and `r = .763` between ME contrast and forced-choice
+  expected agreement over 150 pairs.
+- First descriptive signal check: 2017 item correlations are ME-Likert
+  `r = .925`, ME-yes/no `r = .883`, and ME-forced-choice-selected-rate
+  `r = .557` over 786 aligned items; 2017 pair contrasts are ME-Likert
+  `r = .944`, ME-yes/no `r = .889`, and ME-forced-choice-selected-contrast
+  `r = .715` over 50 pairs.
+- Interpretation for next work: the item matrices are comparable enough to move
+  to the chartered response-function/dimensionality models. Forced choice is
+  aligned but visibly weaker than Likert and yes/no in this descriptive pass.
+  These are staging outputs, not the final measurement model.
+- Created and Roughdraft-reviewed
+  `notes/dimensionality-gate-implementation-plan.md`; review completed with no
+  CriticMarkup changes to resolve.
+- Added `analysis/sprouse_dimensionality_gate.py`, a first-pass approximation
+  to the chartered dimensionality gate. It requires the approved readiness
+  manifest and the descriptive Sprouse outputs, then writes ignored diagnostics
+  under `data/derived/sprouse_analysis/`.
+- Ran the dimensionality-gate pipeline after the approved gate and descriptive
+  item-signal script. Outputs written locally: `sprouse_dimensionality_gate_summary.csv`,
+  `sprouse_dimensionality_eigenvalues.csv`, `sprouse_dimensionality_loadings.csv`,
+  `sprouse_dimensionality_residuals.csv`, and `sprouse_dimensionality_manifest.csv`.
+- First-pass gate result: all three analyzable matrices passed the
+  `single_dimension_sufficient_first_pass` rule. The 2013 pair matrix has first
+  eigenvalue `2.681` (89.4% variance), second eigenvalue `0.284`, parallel-analysis
+  second-eigenvalue 95th percentile `1.051`, RMS residual `.076`, max residual
+  `.101`. The 2017 item matrix has first eigenvalue `3.223` (80.6%), second
+  eigenvalue `0.589`, parallel 95th percentile `1.051`, RMS residual `.088`,
+  max residual `.131`. The 2017 pair matrix has first eigenvalue `3.435`
+  (85.9%), second eigenvalue `0.407`, parallel 95th percentile `1.197`, RMS
+  residual `.067`, max residual `.107`.
+- Interpretation: this first-pass PCA/parallel-analysis gate does not reject a
+  one-dimension measurement structure for the available aggregate Sprouse
+  matrices. It is not the final response-function model. It does make a
+  strong multidimensional rescue for magnitude estimation less likely in these
+  aggregate outputs, while leaving response-function/scaling-specific analysis
+  as the next modelling task.
+- Created and Roughdraft-reviewed
+  `notes/response-function-resolution-plan.md`; review completed with no
+  CriticMarkup changes to resolve.
+- Added `analysis/sprouse_response_function_resolution.py`, a targeted
+  sensitivity diagnostic for Bard's resolution claim. It requires the approved
+  readiness gate and the first descriptive Sprouse outputs, reads the local raw
+  ME/LS files under `/tmp/bard-data-check`, and writes only ignored derived
+  outputs under `data/derived/sprouse_analysis/`.
+- Ran the response-function diagnostic. Outputs written locally:
+  `sprouse_response_function_model_fits.csv`,
+  `sprouse_response_function_bins.csv`,
+  `sprouse_response_function_residuals.csv`, and
+  `sprouse_response_function_manifest.csv`.
+- Response-function result: raw bounded Likert means are better fit as a
+  1--7 bounded-logistic response to ME aggregate z-scores than as a linear
+  response. For 2013 condition means, bounded logistic improves from
+  `R2 = .969` to `.977` with delta AIC `92.0` in its favour. For 2017 item
+  means, bounded logistic improves from `R2 = .845` to `.853` with delta AIC
+  `41.4` in its favour.
+- Resolution diagnostic result: the endpoint bins do not show unusually large
+  ME spread. In 2013, ME z-score SD is `.142` in the lower endpoint bin and
+  `.175` in the upper endpoint bin, versus `.313` in the middle bin. In 2017,
+  ME z-score SD is `.249` lower endpoint and `.321` upper endpoint, versus
+  `.349` in the middle bin. Interpretation: the data support a bounded
+  response-function shape, but do not yet show the practical endpoint
+  resolution advantage Bard's strongest fixed-scale critique would predict.
+- Created `notes/pair-level-resolution-robustness-plan.md` and attempted a
+  Roughdraft checkpoint. Roughdraft opened the file but the CLI watch process
+  exited with a fetch timeout rather than a normal Done Reviewing signal; no
+  CriticMarkup comments were present when the file was read back from disk.
+- Added `analysis/sprouse_pair_resolution_robustness.py`, a pair-level
+  good-vs-bad contrast robustness check. It requires the approved readiness
+  gate and the descriptive pair outputs, reads local raw ME/LS files only to
+  build condition-level aggregates, and writes ignored diagnostics under
+  `data/derived/sprouse_analysis/`.
+- Ran the pair-level robustness diagnostic. Outputs written locally:
+  `sprouse_pair_resolution_rows.csv`,
+  `sprouse_pair_resolution_summary.csv`,
+  `sprouse_pair_resolution_extremes.csv`, and
+  `sprouse_pair_resolution_manifest.csv`.
+- Pair-level result: bounded-method predictors explain most ME contrast
+  variance: `R2 = .926` for 2013 pairs and `.901` for 2017 pairs. ME contrast
+  correlates strongly with raw Likert contrast (`r = .962` in 2013 and `.946`
+  in 2017) and with the bounded-method prediction (`r = .962` and `.949`).
+  Top-quartile overlap is high: 33 of 38 2013 top-quartile ME pairs and 12 of
+  13 2017 top-quartile ME pairs are also top-quartile by bounded prediction.
+  No ME top-quartile pair falls into the bounded-model bottom half in either
+  dataset. Interpretation: the pair-level check reinforces the conclusion that
+  ME tracks the same practical contrast signal without a clear systematic
+  ME-only resolution advantage in these Sprouse data.
+- Integrated the Sprouse results into the manuscript. The abstract now reports
+  the constrained secondary analysis and its result; Section 4 now includes
+  Table `sprouse-diagnostics` summarising convergence, dimensionality,
+  response-function, and pair-level robustness diagnostics; the conclusion now
+  states the bounded-curvature/no-practical-ME-only-resolution distinction.
+- Ran a house-style pass over the edited LaTeX. Paragraph-length warnings
+  introduced or exposed by the edit were split in Sections 4 and 6. The project
+  has only `.house-style/style-rules.yaml` symlinked, not a local
+  `style-guide.md`; the style pass used the available YAML rules and the
+  check-style skill checklist.
+- Rebuilt `main.pdf` with XeLaTeX/Biber/XeLaTeX/XeLaTeX. The build succeeded
+  at 9 pages. Final log scan found no undefined citations, no undefined
+  references, no overfull boxes, and no underfull boxes. Remaining warnings are
+  the existing template-level `fancyhdr` headheight/E-option warnings and the
+  existing `microtype` footnote patch warning.
+
 Next steps:
 
-1. Wait for Sprouse's reply before treating novel secondary results as publication-ready.
-2. If reuse is approved or the analysis is explicitly verification-only, add the first substantive analysis script after the gate reads as open.
-3. Search one more time for Langsford raw data only if the paper needs participant-level test-retest/response-style modelling; otherwise treat Langsford as article-level evidence.
-4. Move project-specific BibTeX entries to the central bibliography later if they become reusable outside this project.
+1. Decide whether Table `sprouse-diagnostics` is enough or whether the paper
+   needs one compact figure from the ignored derived outputs.
+2. Decide whether to search one more time for Langsford raw data. Do this only
+   if the paper needs participant-level test-retest/response-style modelling;
+   otherwise treat Langsford as article-level evidence.
+3. Add the final AI-use disclosure in acknowledgements before submission.
+4. Move project-specific BibTeX entries to the central bibliography later if
+   they become reusable outside this project.
+5. Commit and push once Brett is satisfied with the results-paper direction.
 
 ## Literature Hooks
 

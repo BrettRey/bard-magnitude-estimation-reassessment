@@ -6,17 +6,18 @@ Bard et al.'s case for magnitude estimation included scale resolution,
 fine-grained distinctions, naive-participant use, and replication across groups
 \parencite[32]{BardEtAl1996}. The safer target is that source-grounded claim,
 together with the stronger reading of magnitude estimation that took hold in
-parts of the later methodology literature. Later method-comparison data give the
-paper a sharper question: does magnitude estimation recover item differences,
-participant agreement, or theoretically relevant decisions that simpler tasks
-lose, and in particular does it recover graded distinctions that bounded scales
-compress at the extremes?
+parts of the later methodology literature.
+
+Later method-comparison data give the paper a sharper question: does magnitude
+estimation recover item differences, participant agreement, or theoretically
+relevant decisions that simpler tasks lose, and in particular does it recover
+graded distinctions that bounded scales compress at the extremes?
 
 \textcite{sprouse2013} compare formal judgment tasks with informal published
 judgments, giving evidence about convergence between magnitude estimation,
 Likert ratings, and forced choice. The public Sprouse rows can support a
-bounded reanalysis of item-level agreement and decision consequences, subject
-to reuse permissions. \textcite{LangsfordEtAl2018} add a reliability and
+bounded reanalysis of item-level agreement and decision consequences within
+the approved reuse boundary. \textcite{LangsfordEtAl2018} add a reliability and
 response-bias target by comparing Likert, magnitude estimation, forced choice,
 and Thurstonian models. Without their raw rows, Langsford can support the
 synthesis of published reliability findings but not a new participant-level
@@ -27,14 +28,48 @@ secondary-data design rather than reopening it. The same primary and sensitivity
 representations carry over, so reliability claims stay traceable to fixed units
 of analysis instead of to whichever representation later proves most convenient.
 
-The primary comparison should weigh methods on resolution, prediction, decision
-consequences, and convergence, with priority on consequences for the linguistic
+The primary comparison weighs methods on resolution, prediction, decision
+consequences, and convergence, prioritising consequences for the linguistic
 contrast. Resolution is the criterion Bard's claim lives on: whether magnitude
 estimation recovers graded item differences that bounded scales compress at
 ceiling or floor, or a measurement dimension that survives the dimensionality
 gate. Reliability is a distinct property, not a proxy for it;
 \textcite{LangsfordEtAl2018} report magnitude estimation as less reliable, which
 does not by itself settle resolution.
+
+The Sprouse reanalysis gives a narrow answer. Magnitude estimation and the
+bounded methods share a strong item-level signal. Raw Likert means also show the
+expected bounded response-function curvature relative to magnitude estimation.
+That curvature is the pattern Bard's scale argument makes visible, but the
+endpoint and pair-level diagnostics do not show a systematic practical
+distinction preserved only by magnitude estimation.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.34\linewidth}>{\raggedright\arraybackslash}p{0.34\linewidth}@{}}
+\toprule
+Diagnostic & Sprouse et al.\ 2013 & Sprouse and Almeida 2017 \\
+\midrule
+ME--Likert convergence & Condition \(r=.986\); pair \(r=.963\) & Item \(r=.925\); pair \(r=.944\) \\
+Dimensionality gate & Pair matrix: one dimension sufficient; first component 89.4\% & Item and pair matrices: one dimension sufficient; first components 80.6\% and 85.9\% \\
+Bounded response function & Bounded logistic improves over linear; endpoint ME SDs .142 and .175 versus middle .313 & Bounded logistic improves over linear; endpoint ME SDs .249 and .321 versus middle .349 \\
+Pair robustness & Bounded predictors \(R^2=.926\); no ME top-quartile pair falls in the bounded bottom half & Bounded predictors \(R^2=.901\); no ME top-quartile pair falls in the bounded bottom half \\
+\bottomrule
+\end{tabular}
+\caption{Sprouse diagnostics for Bard's resolution claim. ME = magnitude
+estimation. The response-function rows use magnitude estimation as an
+unbounded diagnostic axis rather than the true latent acceptability scale.}
+\label{tab:sprouse-diagnostics}
+\end{table}
+
+Table~\ref{tab:sprouse-diagnostics} therefore separates two facts. The Likert
+scale behaves like a bounded response function, so a fair null should allow
+compression. Yet the available Sprouse contrasts do not show the further
+pattern that would make magnitude estimation practically superior: endpoint
+regions are not where magnitude estimation spreads out most, and good-vs-bad
+pairs ranked highly by magnitude estimation are also ranked highly by bounded
+methods.
 
 Type S and Type M errors enter only as properties of estimating a named contrast
 at a given sample size, not as properties a format carries. The relevant

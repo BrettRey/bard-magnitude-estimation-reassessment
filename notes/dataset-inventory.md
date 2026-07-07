@@ -8,14 +8,15 @@ based on observed performance.
 ## Raw Data Handling
 
 No raw participant-level data are committed to the repository. Public Sprouse
-verification copies were inspected locally under `/tmp/bard-data-check`.
+working copies are inspected locally under `/tmp/bard-data-check`.
 
 The Sprouse CSV result files include this caveat in their header block: the data
 are provided in the spirit of open science so that researchers can verify the
 analyses, and researchers are asked to contact Jon Sprouse about possible use
-for novel research. Until that reuse question is resolved, structural inventory,
-script drafting, and reproduction-oriented checks are acceptable; publication of
-novel secondary results should remain conditional.
+for novel research. Jon Sprouse approved Brett's limited secondary
+methodological reuse on 2026-07-07 after checking with Diogo Almeida. The
+permission opens outcome analysis within that scope, but it does not make
+participant-level raw files redistributable.
 
 The result CSVs include five non-data lines before the real header. Their own
 metadata note says that R users should try `skip=5`. Analysis scripts should use

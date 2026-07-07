@@ -1,5 +1,53 @@
 # Decisions
 
+## 2026-07-07
+
+- Treat Sprouse et al. (2013) and Sprouse and Almeida (2017) as approved for
+  the planned limited secondary analysis of magnitude estimation's contribution
+  to an item-level acceptability signal. Reason: Jon Sprouse replied that Brett
+  may use the public data files for that purpose after checking with Diogo
+  Almeida.
+- Preserve the permission boundary: do not redistribute participant-level raw
+  files; cite the original papers and data source clearly; if the project drifts
+  away from the magnitude-estimation/item-level-signal question toward a topic
+  closer to Sprouse or Almeida's current interests, reach back out before
+  proceeding.
+- Open the Sprouse outcome-analysis gate with `--reuse-status approved`, while
+  continuing to keep raw files and generated derived tables out of Git unless a
+  deliberate sharing decision is made.
+- Start outcome work with a narrow descriptive item/contrast signal script
+  before attempting the chartered response-function and dimensionality models.
+  Reason: the first post-permission pass should verify item alignment,
+  cross-method signal strength, and ME-vs-bounded-method divergence surfaces
+  without silently replacing the stronger measurement model promised in the
+  charter.
+- Treat `analysis/sprouse_dimensionality_gate.py` as a first-pass
+  dimensionality-gate approximation, not as the final response-function model.
+  Reason: PCA/parallel analysis over aggregate item/contrast matrices can test
+  whether a dominant single dimension is plausible before ME-specific terms are
+  adjudicated, but it does not by itself model method-specific ordinal,
+  binary, or ratio response functions.
+- Treat `analysis/sprouse_response_function_resolution.py` as a targeted
+  response-function sensitivity diagnostic, not as proof that ME is the true
+  latent acceptability scale. Reason: the bounded-logistic Likert response fits
+  better than a linear response in both Sprouse datasets, but the endpoint-bin
+  diagnostics do not show unusually large ME spread where the Likert scale is
+  most compressed. The result supports bounded response-function curvature
+  while weakening a practical Bard-style extra-resolution claim in these data.
+- Treat `analysis/sprouse_pair_resolution_robustness.py` as a robustness check
+  that reinforces the no-clear-practical-resolution-advantage interpretation.
+  Reason: at the good-vs-bad pair level, bounded-method predictors explain most
+  ME contrast variance (`R2 = .926` in 2013 and `.901` in 2017), ME-Likert raw
+  contrast correlations remain high (`r = .962` and `.946`), and no ME
+  top-quartile pair falls in the bounded-model bottom half. The residual
+  extremes are audit targets, not a systematic ME-only resolution pattern.
+- Move the working manuscript from a permission-gated design/synthesis draft to
+  a constrained secondary-data results draft while keeping the construct-level
+  synthesis. Reason: Sprouse reuse is approved, the pre-specified gate and
+  response-function diagnostics have run, and the current results are strong
+  enough to report without waiting for a fuller participant-level model that
+  the available cross-study data cannot support.
+
 ## 2026-06-23
 
 - Use a lower-case folder name: `bard-magnitude-estimation-reassessment`.

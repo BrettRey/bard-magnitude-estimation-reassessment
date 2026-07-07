@@ -5,9 +5,17 @@ dataset inventory is verified.
 
 Candidate first scripts:
 
-- dataset inventory and metadata table;
-- method-comparison harmonization;
-- reliability and participant-response analysis;
+- `sprouse_item_signal.py`: first approved descriptive item/contrast signal
+  pass for the Sprouse 2013 and 2017 data;
+- `sprouse_dimensionality_gate.py`: first-pass PCA/parallel-analysis
+  dimensionality gate over the derived item/contrast matrices;
+- `sprouse_response_function_resolution.py`: bounded-Likert response-function
+  sensitivity analysis for Bard's ME resolution claim;
+- `sprouse_pair_resolution_robustness.py`: pair-level good-vs-bad contrast
+  robustness check for ME-specific resolution after bounded-method prediction;
+- method-comparison harmonization for any fuller response-function model;
+- reliability and participant-response analysis, only where row structure
+  supports it;
 - item-level divergence analysis for grammaticality vs acceptability labels.
 
 Current gate:
@@ -16,6 +24,23 @@ Current gate:
   machine-readable pre-analysis rules under `data/derived/sprouse/`.
 - `scripts/sprouse_analysis_gate.py` reads those rules and writes ignored
   readiness manifests under `data/derived/sprouse_analysis/`.
-- With Sprouse reuse still pending, outcome summaries remain gated. The gate
-  script may be run to verify analysis inputs, but it does not compute method
-  rankings, convergence rates, means, or model fits.
+- Sprouse reuse is approved for the limited secondary methodological analysis.
+  Run `scripts/sprouse_analysis_gate.py --reuse-status approved` before outcome
+  scripts. The approved gate opens descriptive and model-building work within
+  the permission boundary, but raw participant-level files still must not be
+  redistributed.
+- `analysis/sprouse_dimensionality_gate.py` should be run only after
+  `analysis/sprouse_item_signal.py`, because it consumes those derived
+  item/contrast matrices. Its outputs are a first-pass gate, not a final
+  confirmatory response-function model.
+- `analysis/sprouse_response_function_resolution.py` should also be run only
+  after `analysis/sprouse_item_signal.py`. It uses raw local ME/LS files plus
+  the approved readiness gate, writes ignored derived outputs under
+  `data/derived/sprouse_analysis/`, and treats ME as an unbounded diagnostic
+  axis rather than as the true latent acceptability scale.
+- `analysis/sprouse_pair_resolution_robustness.py` should be run after
+  `analysis/sprouse_item_signal.py`. It consumes the derived pair table, reads
+  local raw ME/LS rows only to aggregate condition-level raw Likert contrasts,
+  uses explicit compact-spacing fallback for the known 2013 `den Dikken` and
+  `de Vries` spacing variants, and writes ignored pair-level diagnostics under
+  `data/derived/sprouse_analysis/`.
