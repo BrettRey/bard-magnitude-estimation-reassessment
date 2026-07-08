@@ -25,6 +25,12 @@
   appendix. Reason: a nearby sentence linking Table `sprouse-diagnostics` to the
   documented scripts and clarifying aggregate units gives readers a traceable
   path without expanding the paper's scope.
+- Complete Stage 4 with aggregate-unit bootstrap sensitivity intervals rather
+  than a new modelling program. Reason: resampling the already reported
+  condition, item, and pair units checks whether the compact diagnostics depend
+  on a few aggregate rows; the intervals keep ME-Likert convergence and
+  pair-level bounded-predictor `R2` high without reading, writing, or
+  redistributing participant-level data.
 
 ## 2026-07-07
 

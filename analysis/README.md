@@ -13,6 +13,8 @@ Candidate first scripts:
   sensitivity analysis for Bard's ME resolution claim;
 - `sprouse_pair_resolution_robustness.py`: pair-level good-vs-bad contrast
   robustness check for ME-specific resolution after bounded-method prediction;
+- `sprouse_sensitivity_summary.py`: aggregate-unit bootstrap intervals for the
+  reported cross-method correlations and pair-level bounded-predictor \(R^2\);
 - method-comparison harmonization for any fuller response-function model;
 - reliability and participant-response analysis, only where row structure
   supports it;
@@ -44,6 +46,10 @@ Current gate:
   uses explicit compact-spacing fallback for the known 2013 `den Dikken` and
   `de Vries` spacing variants, and writes ignored pair-level diagnostics under
   `data/derived/sprouse_analysis/`.
+- `analysis/sprouse_sensitivity_summary.py` should be run after the pair-level
+  robustness script. It reads only ignored aggregate outputs, resamples
+  condition/item/pair units rather than participant rows, and writes ignored
+  sensitivity summaries under `data/derived/sprouse_analysis/`.
 
 ## Local reproduction recipe
 
@@ -73,6 +79,7 @@ python3 analysis/sprouse_item_signal.py --raw-root /tmp/bard-data-check
 python3 analysis/sprouse_dimensionality_gate.py
 python3 analysis/sprouse_response_function_resolution.py --raw-root /tmp/bard-data-check
 python3 analysis/sprouse_pair_resolution_robustness.py --raw-root /tmp/bard-data-check
+python3 analysis/sprouse_sensitivity_summary.py
 ```
 
 All generated outputs remain under ignored `data/derived/` paths unless a later

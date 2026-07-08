@@ -338,14 +338,28 @@ Sprouse permission and gate opening (2026-07-07):
   `sprouse-diagnostics` comes from the approved pipeline documented in
   `analysis/README.md` and clarifies that reported `n` values are aggregate
   condition, item, or pair units rather than participant-level rows.
+- Applied Stage 4 optional sensitivity work without opening a new modelling
+  program. Added `analysis/sprouse_sensitivity_summary.py`, which reads only
+  ignored aggregate derived outputs and writes ignored bootstrap summaries under
+  `data/derived/sprouse_analysis/`.
+- Ran `python3 analysis/sprouse_sensitivity_summary.py`. It produced
+  `sprouse_sensitivity_summary.csv` and `sprouse_sensitivity_manifest.csv`
+  locally, both ignored by Git. The aggregate-unit percentile intervals leave
+  the interpretation unchanged: ME-Likert correlations remain high for 2013
+  conditions `[.983, .989]`, 2013 pairs `[.950, .974]`, 2017 items
+  `[.915, .934]`, and 2017 pairs `[.917, .965]`; pair-level bounded-predictor
+  `R2` remains high for 2013 `[.900, .946]` and 2017 `[.862, .941]`.
+- Updated Section 4 and `analysis/README.md` to document the aggregate-unit
+  sensitivity pass and its limitation: it is descriptive over aggregate
+  condition, item, and pair units, not participant-level uncertainty.
 
 Next steps:
 
 1. Move project-specific BibTeX entries to the central bibliography later if
    they become reusable outside this project.
-2. Next manuscript revision: address the review-board R&R items, especially
-   operational practical-advantage thresholds and reproducibility/provenance
-   detail.
+2. Next manuscript revision: a source-to-claim audit before any public release
+   or preprint, followed by venue-specific formatting only after a release form
+   is chosen.
 
 ## Literature Hooks
 

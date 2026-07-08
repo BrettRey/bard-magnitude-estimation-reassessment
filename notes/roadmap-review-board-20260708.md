@@ -9,26 +9,22 @@ proposal. Sprouse reuse permission is approved within a limited methodological
 scope; raw participant-level files remain outside the repository; the manuscript
 reports aggregate diagnostics only.
 
-The last shipped commit is `8663808` (`Harden Gelman-facing decision rules`).
-There is an uncommitted proportional completion pass after that commit:
+The last shipped commit before the Stage 4 pass is `9a87700`
+(`Apply roadmap reader-facing tightening`). Stage 1 was shipped as `c4eb798`
+(`Record roadmap and proportional completion pass`), and Stages 2 and 3 were
+shipped together as `9a87700`.
 
-- Table `sprouse-diagnostics` now includes aggregate counts.
-- Section 5 now includes a compact benchmark-construction table for CoLA, BLiMP,
-  and SAD.
-- The conclusion now states the modest projectibility payoff supported by the
-  Sprouse reanalysis.
-- `STATUS.md`, `DECISIONS.md`, and `main.pdf` are updated accordingly.
+The current Stage 4 pass adds a small sensitivity check rather than a new
+modelling program: aggregate-unit bootstrap intervals for the reported
+cross-method correlations and pair-level bounded-predictor \(R^2\). The
+generated sensitivity CSVs remain ignored under `data/derived/`; the committed
+artifact is the script plus the manuscript and documentation sentences needed
+to interpret it.
 
-The current manuscript remains 10 pages. The latest checks passed: style scan,
-`git diff --check`, `make`, and final LaTeX log scan. Remaining warnings are the
-existing template-level `fancyhdr` warnings and the existing `microtype` footnote
-patch warning.
-
-Progress update: Stage 1 was shipped as commit `c4eb798` (`Record roadmap and
-proportional completion pass`). Stages 2 and 3 have since been applied in the
-manuscript: the abstract and problem section now surface the payoff earlier, key
-measurement terms are more tightly scoped to the aggregate Sprouse evidence, and
-Table `sprouse-diagnostics` is linked to the documented analysis pipeline.
+The current manuscript remains 10 pages. The most recent pre-Stage-4 checks
+passed: style scan, `git diff --check`, `make`, and final LaTeX log scan.
+Remaining warnings are the existing template-level `fancyhdr` warnings and the
+existing `microtype` footnote patch warning.
 
 ## What the Boards Have Said
 
@@ -74,7 +70,7 @@ move.
 
 | July board item | Status after current pass |
 |---|---|
-| Empirical diagnostics too compressed | Partly addressed by adding aggregate counts to Table `sprouse-diagnostics`; formulas and sensitivity ranges remain optional later work |
+| Empirical diagnostics too compressed | Addressed proportionally: aggregate counts are in Table `sprouse-diagnostics`, and aggregate-unit bootstrap intervals now cover the reported correlations and pair-level \(R^2\) |
 | Practical ME advantage lacks decision rule | Addressed by Gelman pass in Section 4 and conclusion |
 | Dimensionality language too strong | Addressed; implemented result is a check/screen, not a full participant-level gate |
 | Reproducibility/provenance too thin | Mostly addressed through `analysis/README.md`, data/code availability, and internal charter wording |
@@ -111,11 +107,13 @@ captions before any public release or preprint.
 ### Reliability
 
 Current state is honest but not exhaustive. The manuscript names aggregate
-diagnostics as weaker than posterior certainty or equivalence testing. It does
-not claim that aggregate PCA rules out participant-level method factors.
+diagnostics as weaker than posterior certainty or equivalence testing, does not
+claim that aggregate PCA rules out participant-level method factors, and now
+adds aggregate-unit bootstrap intervals for the compact reported statistics.
 
-Next reliability gain worth doing: consider a small sensitivity summary if it
-can be produced from existing scripts without opening a new modelling program.
+Next reliability gain worth doing: only source-to-claim audit and
+venue-specific reproducibility detail. A larger modelling appendix should wait
+for reviewer demand or a venue that needs it.
 
 ### Originality
 
@@ -179,18 +177,22 @@ known aggregate unit without raw data redistribution.
 
 Goal: only add analysis that changes evidential strength.
 
-Possible work:
+Status: completed proportionally.
 
-- Bootstrap or jackknife uncertainty intervals for the aggregate correlations
-  and pair-level \(R^2\), if straightforward with existing derived outputs.
-- A concise transformation sensitivity note for ME z-scores and bounded-logistic
-  fits, if the current scripts already support it or can support it cleanly.
-- Promote non-participant-level aggregate outputs if permission and privacy
-  boundaries allow.
+Completed work:
 
-Do not do this merely to appease the completeness instinct. Do it only if the
-result would improve the paper's reliability or prevent a predictable
-misreading.
+- Added `analysis/sprouse_sensitivity_summary.py`.
+- Bootstrapped the aggregate correlations and pair-level \(R^2\) from existing
+  derived outputs.
+- Kept generated aggregate sensitivity CSVs ignored under `data/derived/`.
+
+Deferred work:
+
+- Transformation sensitivity for ME z-scores and bounded-logistic fits. This
+  should not be added unless a reviewer specifically doubts the transformation
+  choice or the current scripts can support it without broadening the paper.
+- Promotion of non-participant-level aggregate outputs. This should wait for a
+  deliberate data-sharing decision.
 
 ### Stage 5: Preprint or Submission Preparation
 
@@ -220,7 +222,6 @@ Exit criterion: chosen release form matches the manuscript's actual scope.
 
 ## Recommended Next Move
 
-Ship the current proportional completion pass, then do Stage 2. The paper's main
-risk is no longer that the core inference is sloppy; it is that a reader may not
-see the payoff quickly enough. Stage 2 directly addresses that without inflating
-the project.
+Run the final checks for the Stage 4 sensitivity pass, then ship it. After that,
+the next real move is Stage 5: choose working-paper, preprint, or journal target
+and run a source-to-claim audit for that release form.
