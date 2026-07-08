@@ -31,6 +31,11 @@
   on a few aggregate rows; the intervals keep ME-Likert convergence and
   pair-level bounded-predictor `R2` high without reading, writing, or
   redistributing participant-level data.
+- During the source-to-claim audit, soften implemented dimensionality language
+  wherever it could imply a completed participant-level factor-model comparison.
+  Reason: the charter's full one-factor/two-factor/bifactor gate remains the
+  right design target for richer data, but the current Sprouse manuscript
+  reports only a first-pass aggregate PCA/parallel-analysis check.
 
 ## 2026-07-07
 

@@ -9,17 +9,15 @@ proposal. Sprouse reuse permission is approved within a limited methodological
 scope; raw participant-level files remain outside the repository; the manuscript
 reports aggregate diagnostics only.
 
-The last shipped commit before the Stage 4 pass is `9a87700`
-(`Apply roadmap reader-facing tightening`). Stage 1 was shipped as `c4eb798`
-(`Record roadmap and proportional completion pass`), and Stages 2 and 3 were
-shipped together as `9a87700`.
+Stage 1 was shipped as `c4eb798` (`Record roadmap and proportional completion
+pass`), Stages 2 and 3 were shipped together as `9a87700` (`Apply roadmap
+reader-facing tightening`), and Stage 4 was shipped as `eb9d122` (`Add
+aggregate sensitivity intervals`).
 
-The current Stage 4 pass adds a small sensitivity check rather than a new
-modelling program: aggregate-unit bootstrap intervals for the reported
-cross-method correlations and pair-level bounded-predictor \(R^2\). The
-generated sensitivity CSVs remain ignored under `data/derived/`; the committed
-artifact is the script plus the manuscript and documentation sentences needed
-to interpret it.
+The current Stage 5 source-to-claim pass softens the dimensionality wording so
+the manuscript distinguishes the full chartered factor-model gate from the
+actually implemented aggregate PCA/parallel-analysis check. It also removes
+stale common-latent-signal and Weskott-verification language from project notes.
 
 The current manuscript remains 10 pages. The most recent pre-Stage-4 checks
 passed: style scan, `git diff --check`, `make`, and final LaTeX log scan.
@@ -222,6 +220,6 @@ Exit criterion: chosen release form matches the manuscript's actual scope.
 
 ## Recommended Next Move
 
-Run the final checks for the Stage 4 sensitivity pass, then ship it. After that,
-the next real move is Stage 5: choose working-paper, preprint, or journal target
-and run a source-to-claim audit for that release form.
+Ship the Stage 5 source-to-claim audit patch. After that, choose the release
+form: working-paper repository checkpoint, preprint, or venue-specific journal
+preparation.

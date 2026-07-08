@@ -101,8 +101,8 @@ or analyse a source until it has been verified against an authoritative page.
     - DOI: <https://doi.org/10.1353/lan.2011.0041>.
     - `references-local.bib` entry `weskott2011` updated with issue 2 and the verified DOI; ready for `/push-bib`.
   - Why it matters: Schütze (2016: 208) states that magnitude estimation's touted advantages over the Likert task have "most or all" been "subsequently refuted," citing this paper and Sprouse, Schütze, and Almeida (2013). This is the canonical anti-ME empirical result the reassessment must engage.
-  - Added to `references-local.bib` as `weskott2011` with a verification-pending comment.
-  - Current role: prior-art anchor for the marginal-contribution claim. Verify primary metadata and, ideally, read the paper before relying on any specific finding beyond Schütze's characterization.
+  - Added to `references-local.bib` as `weskott2011`.
+  - Current role: prior-art anchor for the marginal-contribution claim. Use Schütze's characterization for the "most or all advertised advantages" claim unless Weskott and Fanselow itself is read for more specific findings.
 
 ## Contemporary afterlife
 

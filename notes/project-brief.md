@@ -76,11 +76,11 @@ instability.
 
 Scrambled or permuted data are negative controls, not the main null. They test
 whether the analysis pipeline can recover method advantages from destroyed
-structure. The main comparison is against a common-latent-signal model in which
-all methods measure the same underlying item acceptability with different noise
-and bias profiles. If a source provides only published rates or article-level
-summaries, it can constrain the argument but not enter the participant-level
-model.
+structure. The main comparison is against a response-function measurement null
+in which methods read a common item-level signal through method-specific links,
+with bounded methods allowed to compress the signal at the extremes. If a source
+provides only published rates or article-level summaries, it can constrain the
+argument but not enter the participant-level model.
 
 ## Draft architecture
 

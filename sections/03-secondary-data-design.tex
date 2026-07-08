@@ -72,9 +72,12 @@ as readings of a common item-level acceptability signal through method-specific
 response functions, not as the same signal plus method noise: the bounded
 methods can compress the signal at the extremes, while the open ratio scale need
 not. The single-dimension assumption should be checked before any
-method-specific term is read, by comparing a one-factor model against
-correlated-two-factor and bifactor alternatives and checking method residuals
-for item-level structure where the data support that comparison.
+method-specific term is read. With richer row-level evidence, that check would
+compare a one-factor model against correlated-two-factor and bifactor
+alternatives and inspect method residuals for item-level structure. In the
+present Sprouse reanalysis, the implemented counterpart is deliberately weaker:
+a first-pass PCA/parallel-analysis check over aggregate item and contrast
+matrices.
 
 This ordering matters because the advantage Bard et al.\ actually claimed is
 about resolution, recovering distinctions that fixed scales censor

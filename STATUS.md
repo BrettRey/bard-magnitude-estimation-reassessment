@@ -352,14 +352,29 @@ Sprouse permission and gate opening (2026-07-07):
 - Updated Section 4 and `analysis/README.md` to document the aggregate-unit
   sensitivity pass and its limitation: it is descriptive over aggregate
   condition, item, and pair units, not participant-level uncertainty.
+- Started the Stage 5 source-to-claim audit. Central style checker reported no
+  style violations, and a manual paragraph-length pass found no overlong prose
+  outside table environments. Numerical claims in Table `sprouse-diagnostics`
+  were checked against the ignored derived outputs.
+- Source-to-claim patch from the audit: softened Section 3 and the conclusion
+  so the manuscript distinguishes the full chartered dimensionality design from
+  the actually implemented aggregate PCA/parallel-analysis check. Updated
+  `notes/project-brief.md` to remove a stale common-latent-signal wording, and
+  updated `notes/source-verification.md` to remove stale Weskott verification
+  language.
+- Source-to-claim audit checks passed: central style checker, flagged-prose
+  scan, citation-key validation against central and local bibliographies,
+  `python3 -m py_compile scripts/*.py analysis/*.py`, sensitivity-script rerun,
+  `git diff --check`, `make`, and final LaTeX log scan. The build remains
+  10 pages. Remaining warnings are the existing template-level `fancyhdr`
+  warnings and the existing `microtype` footnote patch warning.
 
 Next steps:
 
 1. Move project-specific BibTeX entries to the central bibliography later if
    they become reusable outside this project.
-2. Next manuscript revision: a source-to-claim audit before any public release
-   or preprint, followed by venue-specific formatting only after a release form
-   is chosen.
+2. Choose the release form: working-paper repository checkpoint, preprint, or
+   venue-specific journal preparation.
 
 ## Literature Hooks
 
