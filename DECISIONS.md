@@ -16,6 +16,15 @@
   table remains the main empirical display, so readers should see the number of
   condition means, item means, or pairs behind each diagnostic without needing a
   separate appendix at this stage.
+- Complete Stage 2 reader-facing tightening by naming the payoff earlier and
+  scoping "signal", "dimension", and "acceptability" language to the available
+  aggregate Sprouse evidence. Reason: the core contribution should be visible by
+  the end of Section 1 without making broader latent-variable claims than the
+  data support.
+- Complete Stage 3 with a minimal auditability bridge rather than a methods
+  appendix. Reason: a nearby sentence linking Table `sprouse-diagnostics` to the
+  documented scripts and clarifying aggregate units gives readers a traceable
+  path without expanding the paper's scope.
 
 ## 2026-07-07
 

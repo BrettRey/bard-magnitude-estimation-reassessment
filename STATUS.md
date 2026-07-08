@@ -326,6 +326,18 @@ Sprouse permission and gate opening (2026-07-07):
   undefined citations, no undefined references, no overfull boxes, and no
   underfull boxes. Remaining warnings are the existing template-level
   `fancyhdr` warnings and the existing `microtype` footnote patch warning.
+- Shipped Stage 1 of the roadmap as commit `c4eb798`:
+  `Record roadmap and proportional completion pass`.
+- Applied Stage 2 reader-facing tightening: the abstract now names "no
+  systematic practical ME-only resolution advantage in the tested Sprouse
+  contrasts"; Section 1 now states the paper's routing/projectibility payoff by
+  the end of the problem section; "signal", "dimension", and "acceptability"
+  language in Sections 4, 6, and 7 is scoped more clearly to aggregate Sprouse
+  evidence and task-conditioned acceptability.
+- Applied Stage 3 minimal auditability: Section 4 now says Table
+  `sprouse-diagnostics` comes from the approved pipeline documented in
+  `analysis/README.md` and clarifies that reported `n` values are aggregate
+  condition, item, or pair units rather than participant-level rows.
 
 Next steps:
 

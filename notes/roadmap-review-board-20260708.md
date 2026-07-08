@@ -24,6 +24,12 @@ The current manuscript remains 10 pages. The latest checks passed: style scan,
 existing template-level `fancyhdr` warnings and the existing `microtype` footnote
 patch warning.
 
+Progress update: Stage 1 was shipped as commit `c4eb798` (`Record roadmap and
+proportional completion pass`). Stages 2 and 3 have since been applied in the
+manuscript: the abstract and problem section now surface the payoff earlier, key
+measurement terms are more tightly scoped to the aggregate Sprouse evidence, and
+Table `sprouse-diagnostics` is linked to the documented analysis pipeline.
+
 ## What the Boards Have Said
 
 ### June 23 Board: Design-Stage Stress Test
