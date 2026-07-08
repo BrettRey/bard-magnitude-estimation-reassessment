@@ -1,5 +1,22 @@
 # Decisions
 
+## 2026-07-08
+
+- Add a compact benchmark-construction table in Section 5 as evidential routing,
+  not as a new survey obligation. Reason: CoLA, BLiMP, and SAD differ by item
+  source, label channel, and evaluation target; making that visible improves
+  accuracy without changing the paper into a benchmark paper.
+- State the projectibility payoff in the conclusion at the level supported by
+  the Sprouse reanalysis. Reason: the warranted projection is modest but real:
+  formal judgments project stable item-level contrast ordering across ordinary
+  elicitation formats in the available Sprouse data, while magnitude estimation
+  alone does not project an additional practical ordering for the tested
+  contrasts.
+- Add aggregate counts directly to Table `sprouse-diagnostics`. Reason: the
+  table remains the main empirical display, so readers should see the number of
+  condition means, item means, or pairs behind each diagnostic without needing a
+  separate appendix at this stage.
+
 ## 2026-07-07
 
 - Treat Sprouse et al. (2013) and Sprouse and Almeida (2017) as approved for

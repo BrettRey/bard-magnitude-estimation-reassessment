@@ -17,12 +17,30 @@ then used to test whether a model prefers the acceptable sentence in a pair.
 Those are useful evaluation resources, but they are not method-comparison data
 for magnitude estimation, Likert ratings, forced choice, or yes/no judgments.
 
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}@{}}
+\toprule
+Resource & Item source & Label channel & Evaluation target \\
+\midrule
+CoLA & Examples from 23 linguistics publications & Binary expert/literature acceptability--grammaticality label & Sentence classification \\
+BLiMP & Expert-crafted grammars, 67 minimal-pair suites & Grammar-generated acceptable/unacceptable contrast & Model preference within a pair \\
+SAD & 1000 sequences from textbooks and Linguistic Inquiry & Separate literature grammaticality and crowd acceptability labels & Channel comparison and acceptability prediction \\
+\bottomrule
+\end{tabular}
+\caption{Benchmark construction differs by source, label channel, and
+evaluation target. These resources show how acceptability-related labels became
+portable, but they do not compare human elicitation methods.}
+\label{tab:benchmark-afterlife}
+\end{table}
+
 The Syntactic Acceptability Dataset is the most useful bridge case because it
 keeps grammatical status and crowd acceptability status apart
 \parencite{juzek2024}. That separation is exactly the level discipline this
-paper needs. So the split is clean: the portability of contrasts survived into
-CoLA and BLiMP through the expert channel, while Bard's graded naive-participant
-measurement has a closer analogue in crowdsourced resources like the Syntactic
-Acceptability Dataset. Benchmark labels show the afterlife of one channel;
-participant-response datasets are still needed to compare human elicitation
-methods.
+paper needs. Table~\ref{tab:benchmark-afterlife} keeps the split visible: the
+portability of contrasts survived into CoLA and BLiMP through the expert
+channel, while Bard's graded naive-participant measurement has a closer analogue
+in crowdsourced resources like the Syntactic Acceptability Dataset. Benchmark
+labels show the afterlife of one channel; participant-response datasets are
+still needed to compare human elicitation methods.

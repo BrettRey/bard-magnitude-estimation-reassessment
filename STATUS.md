@@ -303,6 +303,29 @@ Sprouse permission and gate opening (2026-07-07):
   found no undefined citations, no undefined references, no overfull boxes, and
   no underfull boxes. Remaining warnings are the existing template-level
   `fancyhdr` warnings and the existing `microtype` footnote patch warning.
+- Proportional completion pass (2026-07-08): added Table
+  `benchmark-afterlife` to Section 5, comparing CoLA, BLiMP, and SAD by item
+  source, label channel, and evaluation target. This addresses benchmark
+  construction accuracy without expanding the paper into a benchmark survey.
+- Added a conclusion sentence cashing out the projectibility payoff supported
+  by the Sprouse reanalysis: formal judgments project stable item-level contrast
+  ordering across ordinary elicitation formats in the available data, while
+  magnitude estimation alone does not project an additional practical ordering
+  for the tested contrasts.
+- Added aggregate counts to Table `sprouse-diagnostics`: 2013 condition means
+  `n=298`, 2013 pairs `n=150`, 2017 aligned items `n=786`, and 2017 pairs
+  `n=50`. This makes the compact empirical display more auditable without
+  adding a methods appendix.
+- Created and Roughdraft-reviewed `notes/roadmap-review-board-20260708.md`,
+  which summarizes the June and July review-board assessments, current quality
+  gates, and the staged roadmap from shipping through possible preprint or
+  submission preparation. Review completed with no CriticMarkup changes to
+  resolve.
+- Rebuilt `main.pdf` after the Section 5/conclusion pass. The manuscript remains
+  10 pages. Style scans and `git diff --check` passed; final log scan found no
+  undefined citations, no undefined references, no overfull boxes, and no
+  underfull boxes. Remaining warnings are the existing template-level
+  `fancyhdr` warnings and the existing `microtype` footnote patch warning.
 
 Next steps:
 
