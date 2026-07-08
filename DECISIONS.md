@@ -74,6 +74,11 @@
   later documented. Reason: the analysis charter was a real pre-outcome
   commitment device, but the current manuscript should not imply external
   preregistration.
+- Run a focused Gelman-style hardening pass without adding another model.
+  Reason: the current data support a constrained aggregate diagnostic, so the
+  manuscript is stronger when it states the estimand, practical decision rule,
+  conclusion-changing patterns, uncertainty limits, and provenance trail
+  directly instead of presenting high correlations as the whole argument.
 
 ## 2026-06-23
 

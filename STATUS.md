@@ -281,6 +281,28 @@ Sprouse permission and gate opening (2026-07-07):
 - Added a local reproduction recipe to `analysis/README.md`, including the
   expected `/tmp/bard-data-check` layout and the analysis command sequence. Raw
   participant-level data remains uncommitted and non-redistributed.
+- Created and Roughdraft-reviewed `notes/gelman-satisfaction-plan.md`; review
+  completed with no CriticMarkup changes to resolve.
+- Applied the Gelman-style hardening pass to the manuscript. Section 4 now
+  defines a practical ME advantage as an inferential-decision change rather
+  than a summary-statistic improvement alone; the conclusion states the ME-only
+  patterns that would change the interpretation; the aggregate diagnostics are
+  explicitly weaker than posterior certainty statements or formal equivalence
+  tests; implemented dimensionality language is consistently softened from
+  "gate" to "check" where appropriate.
+- Split and tightened the data/code availability note: it now records Sprouse's
+  permission boundary, the non-redistribution of participant-level rows and
+  derived participant-level tables, the local reproduction recipe, and the
+  Git-versioned internal charter as an internal analysis record rather than an
+  external registry entry.
+- Rebuilt `main.pdf` after the Gelman pass. The manuscript is now 10 pages.
+  House-style scans found no flagged prose patterns in `main.tex` or
+  `sections/*.tex`, apart from table-environment false positives in the
+  paragraph-length helper. `git diff --check`, `make`, and
+  `python3 -m py_compile scripts/*.py analysis/*.py` all passed. Final log scan
+  found no undefined citations, no undefined references, no overfull boxes, and
+  no underfull boxes. Remaining warnings are the existing template-level
+  `fancyhdr` warnings and the existing `microtype` footnote patch warning.
 
 Next steps:
 
