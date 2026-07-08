@@ -1,54 +1,96 @@
 # Bard Magnitude Estimation Reassessment
 
-Working title:
+Working-paper repository for:
 
-*Was magnitude estimation necessary? A secondary-data reassessment of Bard, Robertson, and Sorace (1996)*
+*Was magnitude estimation necessary? A secondary-data reassessment of Bard,
+Robertson, and Sorace (1996)*
 
-## Aim
+Current status: July 2026 Glossa-targeted working-paper repository checkpoint.
+The compiled manuscript is [main.pdf](main.pdf); source lives in
+[main.tex](main.tex) and [sections/](sections/). Venue-prep notes are in
+[submission/](submission/).
 
-Set up a no-new-data methods-and-theory paper around Bard, Robertson, and
-Sorace's 1996 magnitude-estimation article. The project treats Bard et al. as
-the conceptual target, later method-comparison datasets as the empirical base,
-and contemporary acceptability resources as the afterlife of the construct.
+## Current Claim
 
-The paper should not claim to be a direct replication unless the original
-participant-level data can be located. Its stronger form is an archival and
-secondary-data reassessment of what survived: the measurement program for
-acceptability, the documented ME scale-resolution claim, and the later stronger
-reading of ME as a privileged measurement tool.
+The paper separates two claims often run together in the history of magnitude
+estimation:
 
-## Build
+- acceptability judgments are graded, measurable, and methodologically serious;
+- magnitude estimation has a practical advantage over simpler formal judgment
+  tasks.
+
+The current Sprouse reanalysis supports the first claim more strongly than the
+second. In the available aggregate Sprouse diagnostics, magnitude estimation,
+Likert ratings, forced choice, and yes/no judgments preserve a strong practical
+item/contrast signal. The analysis finds bounded response-function curvature,
+but no systematic practical ME-only resolution advantage in the tested Sprouse
+contrasts.
+
+## Data Boundary
+
+Raw participant-level files are not redistributed in this repository. Jon
+Sprouse approved Brett Reynolds's limited secondary use of the public Sprouse,
+Schuetze, and Almeida (2013) and Sprouse and Almeida (2017) data files after
+checking with Diogo Almeida. The approved scope is a methodological analysis of
+magnitude estimation's contribution to an item-level acceptability signal.
+
+Generated outputs under `data/derived/` are ignored by Git. The manuscript
+reports summary diagnostics, not raw participant rows or derived
+participant-level tables. See [data/README.md](data/README.md) and
+[notes/source-verification.md](notes/source-verification.md).
+
+## Reproducing The Analysis
+
+Prerequisites:
+
+- TeX Live with XeLaTeX and Biber;
+- Python 3 with `numpy`, `pandas`, and `scipy`;
+- local copies of the public Sprouse 2013/2017 data and materials, placed under
+  `/tmp/bard-data-check/` as described in [analysis/README.md](analysis/README.md).
+
+Build the manuscript:
 
 ```bash
 make
 ```
 
-Manual build:
+Run the full local analysis pipeline:
 
 ```bash
-xelatex main.tex
-biber main
-xelatex main.tex
-xelatex main.tex
+python3 scripts/build_sprouse_crosswalks.py --raw-root /tmp/bard-data-check
+python3 scripts/sprouse_analysis_gate.py --reuse-status approved
+python3 analysis/sprouse_item_signal.py --raw-root /tmp/bard-data-check
+python3 analysis/sprouse_dimensionality_gate.py
+python3 analysis/sprouse_response_function_resolution.py --raw-root /tmp/bard-data-check
+python3 analysis/sprouse_pair_resolution_robustness.py --raw-root /tmp/bard-data-check
+python3 analysis/sprouse_sensitivity_summary.py
 ```
 
-## Structure
+All analysis products are written to ignored `data/derived/` paths unless a
+later sharing decision deliberately promotes aggregate, non-participant-level
+outputs.
 
-- `main.tex` orchestrates the paper.
-- `sections/` holds section-level source files.
-- `notes/source-verification.md` tracks sources and datasets to verify before citation.
-- `notes/assumptions-and-pressure-test.md` records early falsification conditions.
-- `data/` is for scripts or pointers to reusable public datasets, not raw downloads by default.
-- `analysis/` is for reproducible analysis notebooks/scripts.
-- `references.bib` is a symlink to the central bibliography.
-- `references-local.bib` is for verified project-specific additions only.
+## Repository Map
+
+- [main.tex](main.tex): manuscript driver.
+- [sections/](sections/): section-level manuscript source.
+- [analysis/](analysis/): reproducible analysis scripts and local reproduction
+  recipe.
+- [scripts/](scripts/): structural crosswalk and analysis-gate scripts.
+- [data/README.md](data/README.md): data-handling and permission boundary.
+- [notes/source-verification.md](notes/source-verification.md): source and
+  dataset verification trail.
+- [notes/analysis-charter.md](notes/analysis-charter.md): internal
+  pre-outcome analysis charter.
+- [reviews/](reviews/): simulated review-board reports.
+- [submission/](submission/): release and submission planning notes.
 
 ## House Style
 
-This project uses the central house style strictly by symlink:
+This project uses Brett Reynolds's central house style strictly by symlink:
 
-- `.house-style/preamble.tex -> ../../../.house-style/preamble.tex`
-- `.house-style/style-rules.yaml -> ../../../.house-style/style-rules.yaml`
-- `references.bib -> ../../.house-style/references.bib`
+- `.house-style/preamble.tex -> ../../../../.house-style/preamble.tex`
+- `.house-style/style-rules.yaml -> ../../../../.house-style/style-rules.yaml`
+- `references.bib -> ../../../.house-style/references.bib`
 
 Do not copy house-style files into this project.

@@ -1,9 +1,9 @@
 # Analysis
 
-Use this directory for reproducible analysis scripts or notebooks after the
-dataset inventory is verified.
+Use this directory for reproducible analysis scripts. The current scripts assume
+Python 3 with `numpy`, `pandas`, and `scipy` available.
 
-Candidate first scripts:
+Current scripts:
 
 - `sprouse_item_signal.py`: first approved descriptive item/contrast signal
   pass for the Sprouse 2013 and 2017 data;

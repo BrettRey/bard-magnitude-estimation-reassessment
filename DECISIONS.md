@@ -36,6 +36,11 @@
   Reason: the charter's full one-factor/two-factor/bifactor gate remains the
   right design target for richer data, but the current Sprouse manuscript
   reports only a first-pass aggregate PCA/parallel-analysis check.
+- Aim the next development lane at Glossa while treating the immediate artifact
+  as a Glossa-targeted working-paper repository checkpoint, not yet a submission
+  package. Reason: Glossa is a strong first venue if the paper's projectibility
+  payoff is explicit, but the submission still needs venue-format, anonymous
+  review, word-count, data-availability, and supplement decisions.
 
 ## 2026-07-07
 

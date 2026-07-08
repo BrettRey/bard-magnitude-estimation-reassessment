@@ -368,6 +368,27 @@ Sprouse permission and gate opening (2026-07-07):
   `git diff --check`, `make`, and final LaTeX log scan. The build remains
   10 pages. Remaining warnings are the existing template-level `fancyhdr`
   warnings and the existing `microtype` footnote patch warning.
+- Began the working-paper repository checkpoint pass. Updated `README.md` from
+  scaffold language to public-facing current-status language, corrected moved
+  symlink paths, documented the data-permission boundary and reproduction
+  commands, updated `analysis/README.md` with Python dependencies, updated
+  `submission/README.md` with the current release lane, and changed the
+  manuscript date to July 2026.
+- Working-paper repository checkpoint checks passed: central style checker,
+  flagged-prose scan, `python3 -m py_compile scripts/*.py analysis/*.py`,
+  `git diff --check`, `make`, and final LaTeX log scan. The build remains
+  10 pages.
+- Retargeted the release lane to Glossa after Brett's venue decision. Added
+  `submission/glossa-prep.md` with a Glossa-specific fit note and submission
+  checklist, updated `README.md` and `submission/README.md` to name the
+  Glossa-targeted checkpoint, and logged the remaining venue-specific decisions.
+  Official Glossa pages were consulted through current official search-result
+  text because direct fetches were blocked by Anubis; the checklist requires a
+  manual final guideline check before submission.
+- Glossa-targeted checkpoint checks passed: central style checker, flagged-prose
+  scan, `python3 -m py_compile scripts/*.py analysis/*.py`, `git diff --check`,
+  `make`, and final LaTeX log scan. `make` reported the existing PDF was already
+  current.
 
 Next steps:
 
