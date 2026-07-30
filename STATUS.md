@@ -1,3 +1,30 @@
+---
+slug: bard-magnitude-estimation-reassessment
+kind: paper
+title: Was magnitude estimation necessary? A secondary-data reassessment of Bard, Robertson, and Sorace
+  (1996)
+stage: complete
+external: none
+blocked_on: []
+updated: 2026-07-08
+source:
+- STATUS.md
+notes: 'No PORTFOLIO.md row found despite searching "Bard," "magnitude estimation," and the project slug
+  -- this project is absent from PORTFOLIO.md entirely. STATUS.md documents a fully drafted 10-page manuscript
+  with "no TODO/FIXME markers," an internal six-reviewer simulated review board (unanimous Revise & Resubmit,
+  patches applied), and a chosen release lane: "Retargeted the release lane to Glossa after Brett''s venue
+  decision." No actual submission to Glossa or any venue has occurred (external: none). Flagging an internal
+  STATUS.md inconsistency, not a cross-document conflict: the file''s own final "Next steps" list (the
+  very last lines of the document) still reads "2. Choose the release form: working-paper repository checkpoint,
+  preprint, or venue-specific journal preparation" even though the Glossa retarget entry earlier in the
+  same file already resolved that choice -- read as stale carryover text, not a live blocker, so blocked_on:
+  none. `updated` uses the last explicit date in the file body (2026-07-08, "Proportional completion pass");
+  several further entries (Stage 3/4 work, Glossa retarget, repository checkpoint) follow it undated in
+  the same file.
+
+  '
+---
+
 # Status
 
 ## 2026-06-23
