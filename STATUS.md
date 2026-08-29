@@ -4,19 +4,29 @@ kind: paper
 title: Was magnitude estimation necessary? A secondary-data reassessment of Bard, Robertson, and Sorace
   (1996)
 stage: complete
-external: none
+external: https://lingbuzz.net/lingbuzz/010275
 blocked_on: []
 updated: 2026-08-29
 source:
 - STATUS.md
-notes: 'Complete manuscript being prepared as a strong colleague-sharing draft for Jon Sprouse. The
-  analysis-chartered primary results reproduce from fresh public inputs, and a 162-specification post-outcome
-  multiverse does not change the main conclusion. No venue submission has occurred (external: none).'
+notes: 'LingBuzz preprint 010275 posted 2026-08-29. The analysis-chartered primary results reproduce
+  from fresh public inputs, and a 162-specification post-outcome multiverse does not change the main
+  conclusion. Next: choose a journal target.'
 ---
 
 # Status
 
 ## 2026-08-29
+
+LingBuzz preprint:
+
+- Posted the paper at [LingBuzz 010275](https://lingbuzz.net/lingbuzz/010275).
+  Use `lingbuzz/010275` when citing this version.
+- The posted record gives Brett Reynolds as author, August 2026 as the date,
+  and the keywords “magnitude estimation; acceptability judgments;
+  grammaticality judgments; secondary data; experimental syntax, syntax.”
+- Next action: choose an appropriate journal target; no journal submission is
+  currently active.
 
 Colleague-sharing gate and multiverse:
 

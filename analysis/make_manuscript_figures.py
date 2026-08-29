@@ -27,6 +27,8 @@ PDF_METADATA = {
     "CreationDate": None,
     "ModDate": None,
 }
+CORAL_TEXT = "#C74F41"
+GOLD_TEXT = "#94702B"
 
 
 def parse_args() -> argparse.Namespace:
@@ -140,7 +142,7 @@ def build_response_figure(
         ax.plot(
             data["me_z_mean"],
             data["bounded_logistic_fitted"],
-            color=colors["secondary"],
+            color=CORAL_TEXT,
             linewidth=1.6,
             label="Bounded logistic fit",
         )
@@ -250,7 +252,7 @@ def build_multiverse_figure(
 
     target_colors = {
         "Forced choice": colors["primary"],
-        "Yes/no": colors["quinary"],
+        "Yes/no": GOLD_TEXT,
     }
     mapping_markers = {"raw_ols": "o", "rank_ols": "^"}
     for dataset_index, dataset in enumerate(("2013", "2017")):
