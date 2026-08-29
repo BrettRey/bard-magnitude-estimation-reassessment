@@ -3,13 +3,13 @@
 Raw participant-level datasets are not committed to this repository.
 
 `data/raw/` is ignored except for `.gitkeep`. Any local raw-data copies should
-be treated as private working files and should not be added to Git. Current
-Sprouse working copies are refreshed under `/tmp/bard-data-check`, outside the
-repository.
+be treated as private working files and should not be added to Git. The
+reproduction recipe uses `/tmp/bard-data-check` as an example working location
+outside the repository.
 
 `data/derived/` is also ignored. Generated crosswalks, schema summaries, model
-outputs, and descriptive secondary-analysis tables should be created there
-during local work, then promoted deliberately if they are appropriate to share.
+outputs, and aggregate multiverse tables are created there during local work,
+then promoted deliberately if they are appropriate to share.
 
 For the Sprouse 2013 and 2017 public data files, the CSV headers say the data
 are provided for verification of the original analyses and ask researchers to

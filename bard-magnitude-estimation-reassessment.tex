@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+
+% House style preamble: central symlink only.
+\input{.house-style/preamble.tex}
+\usepackage{float}
+\setlength{\headheight}{14pt}
+\newcommand{\Rsq}{\textit{R}\raisebox{0.5ex}{\scriptsize\liningnums{2}}}
+\newcommand{\deltaRsq}{Δ\Rsq}
+
+% Anonymization toggle for double-blind review.
+\newif\ifblind
+\ifdefined\blindbuild \blindtrue \else \blindfalse \fi
+
+\hypersetup{
+  pdftitle={Was magnitude estimation necessary? A secondary-data reassessment of Bard, Robertson, and Sorace (1996)},
+  pdfkeywords={magnitude estimation, acceptability judgments, grammaticality judgments, secondary data, experimental syntax}
+}
+\ifblind\hypersetup{pdfauthor={}}\fi
+
+\title{Was magnitude estimation necessary?\\
+{\large A secondary-data reassessment of Bard, Robertson, and Sorace (1996)}}
+\ifblind
+  \author{[Author name, ORCID, and affiliation removed for double-blind review]}
+\else
+  \author{Brett Reynolds \orcidlink{0000-0003-0073-7195}%
+  \thanks{Contact: \href{mailto:brett.reynolds@humber.ca}{brett.reynolds@humber.ca}}\\
+  Humber Polytechnic \& University of Toronto}
+\fi
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Was magnitude estimation necessary to establish acceptability judgments as
+serious linguistic measurements? I separate Bard, Robertson, and Sorace's
+broader case for graded acceptability from the narrower claim that magnitude
+estimation improves on simpler formal tasks. Using public method-comparison
+data from Sprouse, Sch\"utze, and Almeida (2013) and Sprouse and Almeida (2017),
+I compare magnitude estimation with Likert, forced-choice, and yes/no judgments.
+The primary analysis follows a charter fixed before outcome analysis. I find a
+strong common item-level signal and the bounded Likert curvature that motivates
+magnitude estimation, but no systematic practical advantage unique to
+magnitude estimation in endpoint, prediction, or decision diagnostics. A
+post-outcome multiverse of 162 specifications confirms the result. Four 2017
+rank-based forced-choice models show small incremental predictive gains, but
+these don't generalize to raw-scale models, yes/no judgments, or the 2013 data.
+The results preserve Bard et al.'s broader contribution (i.e., the formal
+measurement of graded acceptability) while weakening the case that magnitude
+estimation has a general practical advantage for the contrasts examined.
+\end{abstract}
+
+\noindent\textbf{Keywords:} magnitude estimation; acceptability judgments; grammaticality judgments; secondary data; experimental syntax
+
+\aidisclosure{OpenAI GPT-5 and gpt-5.6-sol (Codex); Anthropic Claude Opus}
+
+\input{sections/01-problem}
+\input{sections/02-bard-target}
+\input{sections/03-secondary-data-design}
+\input{sections/04-scale-and-reliability}
+\input{sections/05-contemporary-afterlife}
+\input{sections/06-grammaticality-and-acceptability}
+\input{sections/07-conclusion}
+
+\section*{Data and code availability}
+
+The manuscript source, analysis and figure-generation code, analysis charter,
+source- and dataset-verification records, and reproduction instructions are
+available in the
+\href{https://github.com/BrettRey/bard-magnitude-estimation-reassessment}{public
+GitHub repository}. No raw participant-level data is committed there. Jon
+Sprouse approved reuse for the limited secondary methodological analysis
+described in the charter after checking with Diogo Almeida.
+
+The manuscript reports summary diagnostics rather than redistributing
+participant-level rows or derived participant-level tables. Scripts generate
+ignored local structural derivatives, readiness manifests, and descriptive
+item/contrast signal, dimensionality, response-function, and pair-level
+robustness outputs under \texttt{data/derived/}. The post-outcome multiverse
+adds aggregate unit and pair scores, specification-level results, and input
+hashes there; participant-level raw files and rows remain outside the
+repository.
+
+The local reproduction recipe is documented in \texttt{analysis/README.md}. The
+analysis charter was versioned in Git and fixed before outcome analysis as an
+internal analysis record rather than an external registry entry.
+
+\clearpage
+\printbibliography
+
+\end{document}

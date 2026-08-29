@@ -1,84 +1,99 @@
-# CLAUDE.md
+# Project agent guidance
+<!-- SUMMARY: Agent guidance for Was magnitude estimation necessary? A secondary-data reassessment of Bard, Robertson, and Sorace (1996); deliberately short and routed to portfolio rules · status: active · updated: 2026-08-29 -->
 
-This file provides project-specific guidance for Brett Reynolds's paper:
+Guidance for Claude Code, Codex, and other agents working in this repository.
 
-**Was magnitude estimation necessary? A secondary-data reassessment of Bard, Robertson, and Sorace (1996)**
+## Project
 
-## Project Role
+Academic paper: **Was magnitude estimation necessary? A secondary-data
+reassessment of Bard, Robertson, and Sorace (1996)**, by Brett Reynolds.
 
-This is a no-new-data reassessment project. The contribution is not a direct
-replication of Bard et al. unless the original participant-level data is found.
-The contribution is to test the methodological claims through later datasets
-and to ask what survived: formal acceptability measurement, magnitude
-estimation as a tool, or a broader construct of acceptability.
+This is a no-new-data conceptual replication and secondary-data reassessment.
+The analysis tests Bard et al.'s resolution claim using later method-comparison
+data; it is not a direct replication of Bard et al.
 
-## Local Questions
+## This file is deliberately short
 
-1. Which claim is being tested: scale resolution, reliability, decision
-   convergence, or construct validity?
-2. What is the evidence type: original published numbers, later participant
-   responses, expert labels, or benchmark metadata?
-3. Does a dataset measure acceptability, grammaticality, naturalness,
-   standardness, correction behaviour, or a mixture?
-4. Are Bard et al. being used as a target of reassessment rather than a straw
-   target?
-5. Does the paper need new human judgments to answer the TESL-facing questions?
+House style, writing style, terminology, citation practice, dispatch
+invocations, and submission process live in the portfolio rules. They are not
+copied here.
 
-## Build System
+| What you need | Where it actually lives |
+|---|---|
+| LaTeX house style: terms, mentions, dashes, citations | `../../../.claude/rules/latex-house-style.md` |
+| Writing style, AI tics, paragraph discipline | `../../../.claude/rules/writing-style.md` |
+| CGEL terminology | `../../../.claude/rules/cgel-conventions.md` |
+| Source grounding | `../../../.claude/rules/source-grounding.md` |
+| Bibliography workflow | `../../../.claude/rules/bibliography-workflow.md` |
+| Multi-model dispatch | `../../../.claude/rules/multi-model-dispatch.md` |
+| Portfolio-wide commitments | `../../../canon/` |
+| Values behind the rules | `../../../constitution.md` |
 
-Use XeLaTeX, not pdfLaTeX or LuaLaTeX.
+Read `STATUS.md`, `DECISIONS.md`, `notes/project-brief.md`, and
+`notes/source-verification.md` for project-specific state and research
+constraints.
+
+## Build
+
+Use XeLaTeX. Avoid LuaLaTeX because it breaks the PDF text layer.
 
 ```bash
-make
-make quick
-make clean
+make          # bard-magnitude-estimation-reassessment.pdf
+make quick    # single XeLaTeX pass
+make blind    # bard-magnitude-estimation-reassessment-blind.pdf
+make figures  # regenerate manuscript figures
+make test     # analysis tests and Python compilation checks
+make clean    # remove auxiliary files but keep PDFs
 ```
 
-Manual full build:
+The canonical manuscript root is
+`bard-magnitude-estimation-reassessment.tex`. Never hardcode a TeX Live path
+in `\\setmainfont`.
 
-```bash
-xelatex main.tex
-biber main
-xelatex main.tex
-xelatex main.tex
-```
-
-## File Structure
+## Layout
 
 ```text
 bard-magnitude-estimation-reassessment/
-|-- main.tex
-|-- sections/
-|-- notes/
-|-- data/
-|-- analysis/
-|-- submission/
-|-- STATUS.md
-|-- DECISIONS.md
-|-- README.md
-|-- references.bib          # symlink to ../../.house-style/references.bib
-|-- references-local.bib    # verified project-specific additions only
-`-- .house-style/           # symlinks to central house-style files
+├── bard-magnitude-estimation-reassessment.tex
+├── sections/
+├── figures/
+├── analysis/
+├── data/
+├── references.bib
+├── references-local.bib
+├── .house-style/             # symlinks to the central house style
+├── Makefile
+├── STATUS.md
+├── DECISIONS.md
+└── submission/
 ```
 
-## House Style
+This project uses the central house style strictly by symlink. Do not copy a
+local snapshot into the project.
 
-This project uses Brett's central house style strictly by symlink. Do not copy
-local house-style files into the project.
+## Gates before anything goes out
 
-## Citation and Data Discipline
+Before a formal submission, create and verify:
 
-- Use the central bibliography when the key already exists.
-- Add to `references-local.bib` only after source verification.
-- Keep candidate sources in `notes/source-verification.md` until verified.
-- Do not download, transform, or summarize datasets before reading the dataset
-  documentation.
-- Keep participant response data, expert labels, benchmark labels, and
-  theoretical grammaticality at separate explanatory levels unless the bridge
-  is argued.
+1. `submission/venue-decision-YYYY-MM-DD.md`
+2. `submission/pre-submission-checklist-YYYY-MM-DD.md`
+3. `submission/paper-assurance-YYYY-MM-DD.md`
 
-## Current State
+A colleague-sharing draft does not claim that every venue-specific publication
+gate has run.
 
-Read `STATUS.md`, `DECISIONS.md`, `notes/project-brief.md`, and
-`notes/source-verification.md` at the start of a session. Log durable decisions
-to `DECISIONS.md` as they happen.
+## Canon
+
+This pre-existing paper has no `.canon-stamp`. Do not create one by hand or
+claim reconciliation without running the canon workflow. To inspect drift:
+
+```bash
+python3 ../../../Project-Management/tools/canon_drift.py \
+  --project papers/development/bard-magnitude-estimation-reassessment
+```
+
+## Log decisions as you go
+
+Record non-trivial structural, methodological, terminological, or framing
+decisions in `DECISIONS.md` when they are made. If a decision binds more than
+this paper, it belongs in the portfolio canon.

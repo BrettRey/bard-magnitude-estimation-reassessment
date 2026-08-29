@@ -45,10 +45,11 @@ Current official search-result text indicates:
 - Verify the full Glossa author guidelines and submission checklist in the
   browser before changing the manuscript title page.
 - Generate a submission-grade word count that includes footnotes and references;
-  `texcount -inc -sum main.tex` currently reports about 3,852 words before
+  `texcount -inc -sum bard-magnitude-estimation-reassessment.tex` currently reports about 3,852 words before
   references, but also reports macro-parsing errors and should not be treated as
   the final count.
-- Build the anonymous version with `make blind`, inspect `main-blind.pdf`, and
+- Build the anonymous version with `make blind`, inspect
+  `bard-magnitude-estimation-reassessment-blind.pdf`, and
   check PDF metadata.
 - Review the manuscript for author-identifying wording. The data/source
   permission boundary can name Jon Sprouse and Diogo Almeida, but acknowledgments

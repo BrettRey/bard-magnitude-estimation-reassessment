@@ -1,29 +1,29 @@
 \section{Secondary-data design}
 
 The secondary-data design treats the project as a measurement reassessment of
-Bard, Robertson, and Sorace \parencite{BardEtAl1996}. Four kinds of source
-should stay separate (distinct from the evidential channels of
-Section~\ref{sec:gramm-accept}; these are sources routed to estimands, not
-channels into a profile). Published summaries from Bard et al.\ can source the
-historical claim, but not a direct replication unless their participant-level
-data is found.
+Bard, Robertson, and Sorace \citep{BardEtAl1996}. It separates four kinds of
+source from the observation channels introduced in
+Section~\ref{sec:gramm-accept}: sources are routed to estimands, while channels
+bear on grammatical inferences. Published summaries from Bard et al.\ can source
+the historical claim, but can't support a direct replication without their
+participant-level data.
 
 Later judgment studies can support secondary analysis when they compare
 elicitation methods on shared or comparable items and provide the rows needed
 for the intended estimand. Computational benchmarks can show the afterlife of
-acceptability labels, but they do not bear on magnitude estimation versus
+acceptability labels, but they don't bear on magnitude estimation versus
 Likert ratings. Construct-level discussion can separate acceptability from
 grammaticality, naturalness, standardness, and correction.
 
-\begin{table}[t]
+\begin{table}[H]
 \centering
 \small
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}@{}}
 \toprule
-Source & Evidence level & Use in this paper & Claim it cannot support \\
+Source & Evidence level & Use in this paper & Unsupported claim \\
 \midrule
 Bard et al.\ 1996 & Published article & Historical target and scale-resolution claim & Direct replication without participant rows \\
-Sprouse 2013/2017 & Public row-level comparison data & Constrained secondary method comparison within approved reuse boundary & Raw-data redistribution or drift beyond the approved methodological scope \\
+Sprouse, Sch\"utze, and Almeida 2013; Sprouse and Almeida 2017 & Public row-level comparison data & Constrained secondary method comparison within approved reuse boundary & Raw-data redistribution or drift beyond the approved methodological scope \\
 Langsford et al.\ 2018 & Published article and supplement & Reliability and response-style synthesis & New participant-level reliability model without raw rows \\
 CoLA, BLiMP, SAD & Benchmark labels and documentation & Afterlife of formal acceptability measurement & Evidence about ME versus other human judgment methods \\
 \bottomrule
@@ -33,30 +33,35 @@ Syntactic Acceptability Dataset.}
 \label{tab:evidence-routing}
 \end{table}
 
-The approved reuse boundary resolves the Sprouse side of the genre gate. Public
-row-level data from the Sprouse comparison studies can now support a constrained
-secondary analysis of method performance.
-The Langsford et al.\ reliability study is essential evidence for the argument,
-but unless its raw participant responses are obtained it can only constrain the
-paper at the article-summary level. The paper should therefore not promise a
-full response-style or test-retest model across the whole literature.
+The approved reuse boundary resolves the secondary-data side of the genre gate.
+Public row-level data from the two comparison studies support a constrained
+secondary analysis of method performance. The original studies had different
+aims: \textcite{sprouse2013} estimated convergence between informal and formal
+judgments, while \textcite{sprouse2017} studied task sensitivity and statistical
+power. The present resolution analysis is a secondary use of their rows, not a
+claim about what those studies were designed to test.
 
-The Sprouse files also require representation choices before modelling. For
-\textcite{sprouse2013}, the primary forced-choice comparison should use the
-pair-level sign-test file, because forced choice is a pairwise task and that
-file already records judgments against expected patterns. The logistic file
-preserves item-level binary rows, changing the unit of analysis, so it belongs
-as a named sensitivity specification.
+The verified public Langsford materials available to this project lack raw
+participant responses. This limits Langsford et al.\ to the article-summary
+level; the analysis doesn't attempt a participant-level
+response-style or test-retest model across the literature.
 
-For \textcite{sprouse2017}, yes/no rows with item IDs \texttt{B},
-\texttt{G}, and \texttt{M} should be excluded from item-level comparisons.
-They are absent from the materials workbook, occur in repeated early order
-positions for every subject, and do not align with the magnitude-estimation,
+The comparison files also require representation choices before modelling. For
+the 2013 data, the primary forced-choice comparison uses the pair-level sign-test
+file because forced choice is a pairwise task and that file records judgments
+against expected patterns. The logistic file preserves item-level binary rows
+and changes the unit of analysis, so it serves as a named sensitivity
+specification.
+
+For the 2017 data, yes/no rows with item IDs \texttt{B}, \texttt{G}, and
+\texttt{M} are excluded from item-level comparisons.
+They're absent from the materials workbook, occur in repeated early order
+positions for every subject, and don't align with the magnitude-estimation,
 Likert, or forced-choice item universe. This exclusion is a structural
 inclusion rule, not an outcome-based trimming decision.
 
-Before any modelling, each source should be assigned to an estimand it can
-actually answer. The primary estimand is the item-level acceptability signal
+Each source is assigned to an estimand it can answer. The primary estimand is
+the item-level acceptability signal
 recoverable across methods. Secondary estimands are method-specific noise or
 bias and decision agreement for theoretically relevant contrasts.
 
@@ -64,28 +69,40 @@ Participant response style and method-by-item instability are admissible only
 when the dataset contains the participant-level rows and repeated structure
 needed to estimate them. This ordering keeps the analysis from selecting
 whichever scale looks best after the fact, the kind of forking path Gelman and
-Loken warn about \parencite{GelmanLoken2013,gelman2014statcrisis}.
+Loken warn about \citep{GelmanLoken2013,gelman2014statcrisis}.
 
-The substantive comparison is a measurement null, but a careful one. Magnitude
+The substantive comparison uses a measurement null, but a careful one. Magnitude
 estimation, Likert ratings, forced choice, and Thurstonian choice are modelled
 as readings of a common item-level acceptability signal through method-specific
 response functions, not as the same signal plus method noise: the bounded
 methods can compress the signal at the extremes, while the open ratio scale need
-not. The single-dimension assumption should be checked before any
+not. The single-dimension assumption is checked before any
 method-specific term is read. With richer row-level evidence, that check would
 compare a one-factor model against correlated-two-factor and bifactor
 alternatives and inspect method residuals for item-level structure. In the
-present Sprouse reanalysis, the implemented counterpart is deliberately weaker:
+present reanalysis, the implemented counterpart is deliberately weaker:
 a first-pass PCA/parallel-analysis check over aggregate item and contrast
 matrices.
 
 This ordering matters because the advantage Bard et al.\ actually claimed is
 about resolution, recovering distinctions that fixed scales censor
-\parencite[35]{BardEtAl1996}. A plain common-signal-plus-noise null would book
+\citep[35]{BardEtAl1996}. A plain common-signal-plus-noise null would book
 that resolution as magnitude-estimation noise and let the method only lose; the
 response functions and the dimensionality check let a resolution advantage
 register instead. If one factor suffices, magnitude estimation still has to earn
-its term; if it does not, the analysis turns to where the methods diverge.
+its term; if it doesn't, the analysis turns to where the methods diverge.
 Scrambled labels, method-label permutations, and simulations from the
-response-function model remain negative controls for the pipeline, not the
-substantive comparison.
+response-function model would be pipeline controls rather than substantive
+comparisons; the paper doesn't use them as evidence about ME.
+
+After the chartered analyses were complete, a bounded multiverse tested whether
+their conclusion depended on defensible representation choices. Its
+specification universe was frozen before that analysis was run, but after the
+primary outcomes were known, so it's a post-outcome robustness analysis rather
+than a prespecified test. Three families vary ME and Likert scoring, endpoint
+definitions and spread measures, raw- and rank-scale prediction, and independent
+forced-choice or yes/no adjudication. The resulting 162 specifications test
+scale-boundary spread, incremental out-of-sample information, and actual
+contrast-sign disagreements without treating unexplained ME variance as an
+advantage by itself. The complete decision rules and specification list are
+versioned in \texttt{notes/sprouse-resolution-multiverse-plan.md}.

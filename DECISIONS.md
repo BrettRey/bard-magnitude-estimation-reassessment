@@ -1,5 +1,47 @@
 # Decisions
 
+## 2026-08-29
+
+- Use `bard-magnitude-estimation-reassessment` as the canonical manuscript and
+  PDF stem rather than `main`. Adapt the project to the current central paper
+  template, including its page-1 `\aidisclosure{}` placement, while preserving
+  the central house-style symlinks, the existing anonymous build, and historical
+  audit records. Reason: the source and shareable artifacts should identify the
+  paper without breaking reproducibility or rewriting project history.
+- Prepare a strong colleague-sharing draft for Jon Sprouse rather than running
+  every journal-submission gate. The selected gates cover contribution and
+  source fairness, negative claims, numerical and quotation integrity,
+  reader-facing clarity, terminology and level discipline, projectibility,
+  proofreading, bibliography and house style, build integrity, and visual PDF
+  inspection.
+- Add a bounded multiverse as a post-outcome robustness analysis. Its 162
+  specifications were frozen in
+  `notes/sprouse-resolution-multiverse-plan.md` before the full run; this is a
+  transparent robustness exercise, not a preregistration or a replacement for
+  the analysis-chartered primary pipeline.
+- Keep participant-level public data outside the repository. The multiverse
+  writes only aggregate outputs and a hash manifest, preserving the reuse and
+  redistribution boundary agreed with Sprouse and Almeida.
+- Retain the primary conclusion after the multiverse. No endpoint, prediction,
+  or independent-decision family clears the stated conclusion-changing rule in
+  both datasets. Report the small 2017 rank-based forced-choice exception as a
+  localized qualification rather than generalizing it across targets or
+  scoring choices.
+- Narrow the projectibility claim to the evidence actually supplied: stable
+  aggregate contrast ordering across ordinary task formats in the sampled
+  2013 and 2017 comparison materials. The paper does not establish broad grammaticality
+  projections, causal homeostasis, or a general cross-channel profile.
+- State the original purposes of the Sprouse studies explicitly: the 2013 study
+  tests convergence between formal and informal judgment methods, and the 2017
+  study compares statistical sensitivity and power. The present endpoint-
+  resolution analysis is a secondary use, not their original estimand.
+- Add two aggregate-data figures rather than a broad suite of diagnostic plots.
+  The response-function figure visualizes the common signal and bounded Likert
+  curvature; the multiverse figure exposes the localized positive results in
+  the context of all endpoint, prediction, and decision specifications. Omit a
+  scree plot because it would overemphasize a deliberately weak first-pass
+  dimensionality check.
+
 ## 2026-07-08
 
 - Add a compact benchmark-construction table in Section 5 as evidential routing,

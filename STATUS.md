@@ -6,26 +6,71 @@ title: Was magnitude estimation necessary? A secondary-data reassessment of Bard
 stage: complete
 external: none
 blocked_on: []
-updated: 2026-07-08
+updated: 2026-08-29
 source:
 - STATUS.md
-notes: 'No PORTFOLIO.md row found despite searching "Bard," "magnitude estimation," and the project slug
-  -- this project is absent from PORTFOLIO.md entirely. STATUS.md documents a fully drafted 10-page manuscript
-  with "no TODO/FIXME markers," an internal six-reviewer simulated review board (unanimous Revise & Resubmit,
-  patches applied), and a chosen release lane: "Retargeted the release lane to Glossa after Brett''s venue
-  decision." No actual submission to Glossa or any venue has occurred (external: none). Flagging an internal
-  STATUS.md inconsistency, not a cross-document conflict: the file''s own final "Next steps" list (the
-  very last lines of the document) still reads "2. Choose the release form: working-paper repository checkpoint,
-  preprint, or venue-specific journal preparation" even though the Glossa retarget entry earlier in the
-  same file already resolved that choice -- read as stale carryover text, not a live blocker, so blocked_on:
-  none. `updated` uses the last explicit date in the file body (2026-07-08, "Proportional completion pass");
-  several further entries (Stage 3/4 work, Glossa retarget, repository checkpoint) follow it undated in
-  the same file.
-
-  '
+notes: 'Complete manuscript being prepared as a strong colleague-sharing draft for Jon Sprouse. The
+  analysis-chartered primary results reproduce from fresh public inputs, and a 162-specification post-outcome
+  multiverse does not change the main conclusion. No venue submission has occurred (external: none).'
 ---
 
 # Status
+
+## 2026-08-29
+
+Colleague-sharing gate and multiverse:
+
+- Migrated the canonical manuscript root from `main.tex` to
+  `bard-magnitude-estimation-reassessment.tex` and adopted the applicable parts
+  of the current central paper template. The normal and anonymous PDFs now use
+  the same descriptive stem, and the AI-use disclosure appears on page 1.
+- Selected a proportionate gate for sharing the paper with Jon Sprouse rather
+  than a full publication workflow. The review scope is fixed in
+  `notes/sprouse-sharing-gate-plan.md`.
+- Downloaded fresh copies of the public data and materials accompanying
+  Sprouse, Schütze, and Almeida (2013) and Sprouse and Almeida (2017) to a
+  temporary directory outside the repository. Recorded SHA-256 hashes for all
+  four inputs in the multiverse manifest.
+- Re-ran the full primary comparison-data pipeline against those fresh inputs. Every
+  selected derived CSV matched the retained outputs byte for byte, including
+  item matrices, pair contrasts, correlations, dimensionality diagnostics,
+  response-function results, pair robustness, and bootstrap sensitivity.
+- Added `analysis/sprouse_resolution_multiverse.py` and four focused tests in
+  `analysis/test_sprouse_resolution_multiverse.py`. The code compiles, all tests
+  pass, repeated smoke runs are deterministic, and the supplied-score branch
+  matches the primary unit and pair scores to numerical tolerance.
+- Froze and ran 162 post-outcome robustness specifications: 54 endpoint, 72
+  prediction, and 36 independent-decision specifications across the two
+  datasets. No diagnostic family clears the conclusion-changing rule in either
+  dataset. The only notable local pattern is four 2017 rank-OLS specifications
+  targeting forced choice; it does not generalize to yes/no, raw-score models,
+  the other dataset, or the other diagnostic families.
+- The manuscript now reports the multiverse timing, scope, decision rule,
+  result, and localized qualification. It also distinguishes the original aims
+  of the two source studies from this secondary estimand and narrows the
+  projectibility claim to task-format ordering in the sampled contrasts.
+- Participant-level inputs remain outside the repository. The multiverse writes
+  only aggregate diagnostics and a hash manifest.
+- Completed the proportionate colleague-sharing gate. The consolidated audit is
+  in `notes/passes/2026-08-29-sprouse-sharing-gates.md`; contribution, source
+  fairness, negative claims, quotations, reader clarity, terminology,
+  explanatory levels, projectibility, proofreading, bibliography, house style,
+  build integrity, and visual rendering are green.
+- Rewrote the abstract in a compact, results-first working-paper style and made
+  the data attribution explicit throughout: Sprouse, Schütze, and Almeida
+  (2013), and Sprouse and Almeida (2017).
+- Added a deterministic aggregate-only figure script and two manuscript
+  figures: shared-signal/bounded-response panels and a three-panel multiverse
+  landscape. Repeated generation produces byte-identical PDF and PNG files;
+  the script never reads participant-level inputs.
+- Rebuilt the final PDF with XeLaTeX and Biber.
+  `bard-magnitude-estimation-reassessment.pdf` is 13 pages with all
+  fonts embedded, no unresolved citations or references, no overfull or
+  underfull boxes, and no visual defects across the page renders. Only the known
+  central-template `fancyhdr` and `microtype` warnings remain.
+- Current release state: ready to send to Jon Sprouse as a strong working-paper
+  draft. This checkpoint is not a claim that venue-specific or full publication
+  gates have run.
 
 ## 2026-06-23
 
@@ -285,8 +330,8 @@ Sprouse permission and gate opening (2026-07-07):
   advantage in these data, and the dimensionality result is a first-pass
   aggregate diagnostic rather than a full participant-level factor model.
 - Added the final AI-use disclosure in the acknowledgements, naming OpenAI Codex
-  (GPT-5) and Claude Opus for the recorded project uses. The manuscript no
-  longer has a TODO marker.
+  (GPT-5 and `gpt-5.6-sol`) and Anthropic Claude Opus for the recorded project
+  uses. The manuscript no longer has a TODO marker.
 - Rebuilt `main.pdf` after the review edits. The build remains 9 pages. Final
   scans found no TODO/FIXME markers, no undefined citations or references, no
   overfull boxes, and no underfull boxes. Remaining warnings are the existing

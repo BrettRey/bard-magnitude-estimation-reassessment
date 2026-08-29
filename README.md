@@ -5,10 +5,12 @@ Working-paper repository for:
 *Was magnitude estimation necessary? A secondary-data reassessment of Bard,
 Robertson, and Sorace (1996)*
 
-Current status: July 2026 Glossa-targeted working-paper repository checkpoint.
-The compiled manuscript is [main.pdf](main.pdf); source lives in
-[main.tex](main.tex) and [sections/](sections/). Venue-prep notes are in
-[submission/](submission/).
+Current status: August 2026 Glossa-targeted working-paper repository checkpoint.
+The compiled manuscript is
+[bard-magnitude-estimation-reassessment.pdf](bard-magnitude-estimation-reassessment.pdf);
+source lives in
+[bard-magnitude-estimation-reassessment.tex](bard-magnitude-estimation-reassessment.tex)
+and [sections/](sections/). Venue-prep notes are in [submission/](submission/).
 
 ## Current Claim
 
@@ -24,7 +26,9 @@ second. In the available aggregate Sprouse diagnostics, magnitude estimation,
 Likert ratings, forced choice, and yes/no judgments preserve a strong practical
 item/contrast signal. The analysis finds bounded response-function curvature,
 but no systematic practical ME-only resolution advantage in the tested Sprouse
-contrasts.
+contrasts. A bounded, explicitly post-outcome multiverse reaches the same
+conclusion across 162 specifications, while retaining a localized 2017
+rank-based forced-choice sensitivity result.
 
 ## Data Boundary
 
@@ -64,6 +68,8 @@ python3 analysis/sprouse_dimensionality_gate.py
 python3 analysis/sprouse_response_function_resolution.py --raw-root /tmp/bard-data-check
 python3 analysis/sprouse_pair_resolution_robustness.py --raw-root /tmp/bard-data-check
 python3 analysis/sprouse_sensitivity_summary.py
+python3 analysis/sprouse_resolution_multiverse.py --raw-root /tmp/bard-data-check
+python3 analysis/test_sprouse_resolution_multiverse.py
 ```
 
 All analysis products are written to ignored `data/derived/` paths unless a
@@ -72,7 +78,8 @@ outputs.
 
 ## Repository Map
 
-- [main.tex](main.tex): manuscript driver.
+- [bard-magnitude-estimation-reassessment.tex](bard-magnitude-estimation-reassessment.tex):
+  manuscript driver.
 - [sections/](sections/): section-level manuscript source.
 - [analysis/](analysis/): reproducible analysis scripts and local reproduction
   recipe.

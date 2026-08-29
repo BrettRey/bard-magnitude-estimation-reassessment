@@ -15,10 +15,13 @@ Current scripts:
   robustness check for ME-specific resolution after bounded-method prediction;
 - `sprouse_sensitivity_summary.py`: aggregate-unit bootstrap intervals for the
   reported cross-method correlations and pair-level bounded-predictor \(R^2\);
-- method-comparison harmonization for any fuller response-function model;
-- reliability and participant-response analysis, only where row structure
-  supports it;
-- item-level divergence analysis for grammaticality vs acceptability labels.
+- `sprouse_resolution_multiverse.py`: explicitly post-outcome, aggregate-output
+  robustness multiverse over endpoint resolution, incremental prediction, and
+  decision adjudication;
+- `test_sprouse_resolution_multiverse.py`: focused synthetic checks for scoring,
+  endpoint, prediction, and decision logic;
+- `make_manuscript_figures.py`: deterministic aggregate-only response-function
+  and multiverse figures for the manuscript.
 
 Current gate:
 
@@ -50,6 +53,14 @@ Current gate:
   robustness script. It reads only ignored aggregate outputs, resamples
   condition/item/pair units rather than participant rows, and writes ignored
   sensitivity summaries under `data/derived/sprouse_analysis/`.
+- `analysis/sprouse_resolution_multiverse.py` should be run last. It reads local
+  participant rows to construct three ME and three Likert scores, but writes no
+  participant identifier or participant-level row. Its 162-specification
+  universe and decision criteria were frozen after the primary outcomes were
+  known and are therefore reported as post-outcome robustness rather than as a
+  prespecified analysis. Zero ME responses are unavailable only to the literal
+  log branch; rows with a supplied z-score but a missing raw judgment remain in
+  the supplied-z branch.
 
 ## Local reproduction recipe
 
@@ -80,7 +91,12 @@ python3 analysis/sprouse_dimensionality_gate.py
 python3 analysis/sprouse_response_function_resolution.py --raw-root /tmp/bard-data-check
 python3 analysis/sprouse_pair_resolution_robustness.py --raw-root /tmp/bard-data-check
 python3 analysis/sprouse_sensitivity_summary.py
+python3 analysis/sprouse_resolution_multiverse.py --raw-root /tmp/bard-data-check
+python3 analysis/test_sprouse_resolution_multiverse.py
+python3 analysis/make_manuscript_figures.py
 ```
 
 All generated outputs remain under ignored `data/derived/` paths unless a later
 sharing decision deliberately promotes aggregate, non-participant-level files.
+The figure script reads only those aggregate outputs and writes vector PDFs and
+PNG previews under `figures/`; it doesn't read participant-level inputs.
